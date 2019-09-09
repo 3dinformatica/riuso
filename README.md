@@ -46,7 +46,7 @@ Requisiti per l'esecuzione di conversioni ed estrazione di testo da parte di FCS
 
 
 ## Console Audit
-
+Per approfondimenti e consultazione del repository della Console Audit [Click qui](https://github.com/3dinformatica/auditConsole/blob/master/README.md)
 Web Application grazie alla quale è possibile consultare i dati di audit registrati per uno o più applicativi. L'interfaccia web realizzata permette (previa autenticazione ed autorizzazione) diversi filtri di ricerca sui risultati registrati tramite AUDIT:
 - Filtro su archivio (nome del database)
 - Filtro su tipologia di operazione (modifica, login, etc.) - Non ci sono vincoli sulle tipologie di operazioni utilizzabili
