@@ -31,12 +31,16 @@ In base alla struttura appena descritta, è quindi possibile utilizzare le libre
 
 #### FCA
 
+Il repository del presente modulo FCA è raggiungibile [qui](https://github.com/3dinformatica/docway-fca/blob/master/README.md)
+
 **it.tredi.abstract-fca**: Configurazione del POOL di FCS con gestione del recupero e assegnazione dei lavori ai differenti processi di FCS (su server distinti).
 
 **it.tredi.docway-fca**: Implementazione per DocWay di FCA, ovvero recupero dei documenti di DocWay da processare (documenti contenenti allegati per i quali è richiesta la conversione e/o estrazione del testo).
 
 
 #### FCS
+
+Il repository del presente modulo FCS è raggiungibile [qui](https://github.com/3dinformatica/docway-fcs/blob/master/README.md)
 
 **it.tredi.abstract-fcs**: Elaborazione vera e propria dei files. Logiche di conversione ed estrazione testo dai file (integrazione con le varie dipendenze software).
 
@@ -52,7 +56,7 @@ Requisiti per l'esecuzione di conversioni ed estrazione di testo da parte di FCS
 
 
 ## Console Audit
-Per approfondimenti e consultazione del repository della Console Audit [Click qui](https://github.com/3dinformatica/auditConsole/blob/master/README.md)
+Il repository del presente modulo di Console Audit è raggiungibile [qui](https://github.com/3dinformatica/auditConsole/blob/master/README.md)
 
 Web Application grazie alla quale è possibile consultare i dati di audit registrati per uno o più applicativi. L'interfaccia web realizzata permette (previa autenticazione ed autorizzazione) diversi filtri di ricerca sui risultati registrati tramite AUDIT:
 - Filtro su archivio (nome del database)
