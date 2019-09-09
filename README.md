@@ -1,5 +1,11 @@
 # Descrizione dei progetti in Riuso
 
+3D Informatica vanta oltre trent’anni di esperienza al servizio di pubbliche amministrazioni, locali e centrali, complesse e articolate, alle quali viene offerto un supporto totale rispetto a tutti i processi di progettazione, sviluppo, mantenimento e miglioramento di sistemi informativi. Nel rispetto delle novità del nuovo piano triennale per l’informatica nella Pubblica Amministrazione e delle nuove linee guida su acquisizione e riuso di software per le pubbliche amministrazioni, grazie all'apertura e alla disponibilità di ADER, ha messo in riuso i moduli di DocWay di seguito descritti.
+
+Il riuso è così articolaro:
+
+...
+
 ## FCA/FCS
 
 FCA (File Conversion Agent) e FCS (File Conversion Service) consistono in 2 processi che permettono l'**estrazione del testo da files** e la **conversione di files in un differente formato** (es. da DOC a PDF). 
