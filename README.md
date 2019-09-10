@@ -1,6 +1,6 @@
 # Descrizione dei progetti in Riuso
 
-3D Informatica vanta oltre trent’anni di esperienza al servizio di pubbliche amministrazioni, locali e centrali, complesse e articolate, alle quali viene offerto un supporto totale rispetto a tutti i processi di progettazione, sviluppo, mantenimento e miglioramento di sistemi informativi. Nel rispetto delle novità del nuovo piano triennale per l’informatica nella Pubblica Amministrazione e delle nuove linee guida su acquisizione e riuso di software per le pubbliche amministrazioni, grazie all'apertura e alla disponibilità di ADER, ha messo in riuso i moduli di DocWay di seguito descritti.
+3D Informatica vanta oltre trent’anni di esperienza al servizio di Pubbliche Amministrazioni, locali e centrali, complesse e articolate, alle quali viene offerto un supporto totale rispetto a tutti i processi di progettazione, sviluppo, mantenimento e miglioramento di sistemi informativi. Nel rispetto delle novità del nuovo piano triennale per l’informatica nella Pubblica Amministrazione e delle nuove linee guida su acquisizione e riuso di software per le Pubbliche Amministrazioni, e grazie all'apertura e alla disponibilità di ADER, l'Azienda ha messo in riuso i moduli di DocWay di seguito descritti.
 
 Il riuso è così articolaro:
 
