@@ -37,8 +37,6 @@ In base alla struttura appena descritta, è quindi possibile utilizzare le libre
 
 #### FCA
 
-Il repository del presente modulo FCA è raggiungibile [qui](https://github.com/3dinformatica/docway-fca/blob/master/README.md)
-
 **it.tredi.abstract-fca**: Configurazione del POOL di FCS con gestione del recupero e assegnazione dei lavori ai differenti processi di FCS (su server distinti).
 
 **it.tredi.docway-fca**: Implementazione per DocWay di FCA, ovvero recupero dei documenti di DocWay da processare (documenti contenenti allegati per i quali è richiesta la conversione e/o estrazione del testo).
@@ -46,7 +44,6 @@ Il repository del presente modulo FCA è raggiungibile [qui](https://github.com/
 
 #### FCS
 
-Il repository del presente modulo FCS è raggiungibile [qui](https://github.com/3dinformatica/docway-fcs/blob/master/README.md)
 
 **it.tredi.abstract-fcs**: Elaborazione vera e propria dei files. Logiche di conversione ed estrazione testo dai file (integrazione con le varie dipendenze software).
 
@@ -61,8 +58,7 @@ Requisiti per l'esecuzione di conversioni ed estrazione di testo da parte di FCS
 - Tesseract
 
 
-## Console Audit
-Il repository del presente modulo di Console Audit è raggiungibile [qui](https://github.com/3dinformatica/auditConsole/blob/master/README.md)
+## [Console Audit](https://github.com/3dinformatica/auditConsole/blob/master/README.md)
 
 Web Application grazie alla quale è possibile consultare i dati di audit registrati per uno o più applicativi. L'interfaccia web realizzata permette (previa autenticazione ed autorizzazione) diversi filtri di ricerca sui risultati registrati tramite AUDIT:
 - Filtro su archivio (nome del database)
@@ -128,7 +124,15 @@ Di seguito è descritto il formato del record di AUDIT registrato su archivio Mo
 | data | Data e Ora di svolgimento dell'azione da parte dell'utente |
 | changes | Elenco di modifiche apportate al record (per ogni campo viene indicato il valore precedente alla modifica e quello successivo) |
 
+## [MSA](https://github.com/3dinformatica/msa/blob/master/README.md)
 
+MSA (Mail Storage Agent) è un servizio Java multi-processo che si occupa delle seguenti operazioni:
+* archiviazione delle email PEC e non (le mail vengono trasformate e salvate in documenti in DocWay XML);
+* scambio di documenti tra sistemi DocWay XML differenti mediante la posta elettronica certificata (interoperabilità);
+* Completa gestione del processo di interfacciamento con lo SdI per le fatture elettroniche.
+MSA lavora esaminando periodicamente delle caselle di posta (certificate o meno) e dispone di una sua specifica console di amministrazione e controllo.
+
+...
 
 ## Gestione documentale e protocollo informatico
 
