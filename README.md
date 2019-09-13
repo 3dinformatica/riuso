@@ -8,9 +8,9 @@ Il progetto di riuso si articola dunque attraverso la liberazione del sorgente d
 
 Allo stesso tempo i moduli dei quali viene liberato il codice sorgente, possono essere utilizzati sia in combinazione con l'applicazione documentale scaricata e rilasciata in questo repository come dipendenza al fine di estenderne le funzionalità e le capacità, sia come progetti software a se stanti, ciascuno dei quali in grado di operare ad uno strato più "generico" con specifiche finalità.
 
-Per ciascun modulo descritto di seguito, vengono indicate le funzionalità principali e l'architettura del modulo stesso, il flusso di esecuzione, le dipendenze, le modalità di installazione e di utilizzo così come suggerimenti per gli sviluppatori che dovessero usare il codice liberato per implementarlo in proprie applicazioni.
-
 La licenza di distribuzione open source scelta dall'Amministrazione è la Affero General Public License (AGPL) v3. 
+
+Per ciascun modulo descritto di seguito, vengono indicate le funzionalità principali e l'architettura del modulo stesso, il flusso di esecuzione, le dipendenze, le modalità di installazione e di utilizzo così come suggerimenti per gli sviluppatori che dovessero usare il codice liberato per implementarlo in proprie applicazioni.
 
 ## FCA/FCS
 
