@@ -362,4 +362,4 @@ Agenzia delle Entrate-Riscossione (ADER)
 | http://www.3di.it |
 
 ##### Indirizzo e-mail a cui inviare segnalazioni di sicurezza:
-segnalazioni@3di.it
+tickets@3di.it
