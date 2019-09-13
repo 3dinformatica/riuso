@@ -1,4 +1,4 @@
-# Descrizione del progetto di Riuso.
+# Descrizione del progetto di Riuso
 
 3D Informatica vanta oltre trent’anni di esperienza al servizio di Pubbliche Amministrazioni, locali e centrali, complesse e articolate, alle quali viene offerto un supporto totale rispetto a tutti i processi di progettazione, sviluppo, mantenimento e miglioramento di sistemi informativi.
 
@@ -133,22 +133,6 @@ MSA (Mail Storage Agent) è un servizio Java multi-processo che si occupa delle 
 MSA lavora esaminando periodicamente delle caselle di posta (certificate o meno) e dispone di una sua specifica console di amministrazione e controllo.
 
 ...
-
-##### Status del progetto:
-
-- stabile
-
-##### Limitazioni sull'utilizzo del progetto:
-
-Il software, allo stato attuale, deve essere associato a un database specifico.
-
-SW | DB
---- | ---
-DocWay | eXtraWay
-FCS/FCA | eXtraWay
-MSA | eXtraWay + MongoDB
-AUDIT | MongoDB
-___
 
 ##### Detentori di copyright:
 
