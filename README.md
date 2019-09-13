@@ -133,7 +133,7 @@ DocWay è stato pensato e sviluppato per consentire agli utenti:
 * l'organizzazione dei documenti secondo un piano di classificazione e archiviazione in fascicoli, secondo le necessità di ordinamento e di ricerca più coerenti e congrue rispetto alla gestione materiale (fisica) degli stessi
 * il trattamento (organizzazione e sedimentazione) dei documenti nell'ambito dei processi amministrativi e/o aziendali
 
-![Home Page DocWay](images\homeDW.jpg)
+![homeDW](https://user-images.githubusercontent.com/9255029/64847149-a2c1b200-d60e-11e9-8dbc-4bef661d1fc7.jpg)
 
 Nello specifico DocWay garantisce:
 
@@ -154,7 +154,7 @@ Nello specifico DocWay garantisce:
 * l'assegnazione massiva di documenti a partire da una selezione di documenti;
 * l'accesso in delega che consente a un utente di accedere con i diritti e le credenziali di un'altra persona interna (che lo ha designato opportunamente) e di tenere traccia di tutte le operazioni che vengono eseguite.
 
-![Funzionalità DocWay](images\cruscottoDW.jpg)
+![cruscottoDW](https://user-images.githubusercontent.com/9255029/64847148-a2c1b200-d60e-11e9-8bc9-449a1a0e29d8.jpg)
 
 * la personalizzazione delle tipologie documentali standard ARRIVO, PARTENZA, INTERNO, NON PROTOCOLLATO con aggiunta di metadati personalizzati e possibilità di semplificazione dei metadati di default; utilizzo di etichette personalizzate a integrazione delle informazioni di classificazione;
 * la personalizzazione di nuove tipologie di documenti con aggiunta di metadati personalizzati e possibilità di semplificazione dei metadati di default; rendering automatico delle maschere di inserimento, ricerca, visualizzazione per i documenti personalizzati;
@@ -180,7 +180,7 @@ DocWay è una full web application sviluppata in Java in ambiente J2EE in archit
 
 La soluzione proposta gestisce e supporta la modalità multi-Ente e multi-AOO senza alcuna limitazione, né tecnologica, né funzionale, né commerciale in quanto consente di configurare più ambienti virtuali e fisici al fine di bilanciare l'esigenza di performance con la massima separazione delle informazioni e autonomia dei sottosistemi.
 
-![Struttura DocWay](images\strutturaDW.png)
+![strutturaDW](https://user-images.githubusercontent.com/9255029/64847150-a35a4880-d60e-11e9-88c8-4af1688cfb65.png)
 
 Si tratta di una soluzione aperta basata sulle piattaforme tecnologiche MongoDB e eXtraWay XML, pensata e realizzata adottando gli Open Standard di riferimento (XML, JEE, SOA, JASON), per garantire l'espandibilità della soluzione e per accogliere una eventuale futura razionalizzazione e automazione di altri flussi applicativi.
 
