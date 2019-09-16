@@ -124,7 +124,7 @@ Di seguito è descritto il formato del record di AUDIT registrato su archivio Mo
 | data | Data e Ora di svolgimento dell'azione da parte dell'utente |
 | changes | Elenco di modifiche apportate al record (per ogni campo viene indicato il valore precedente alla modifica e quello successivo) |
 
-## [MSA](https://github.com/3dinformatica/msa/blob/master/README.md)
+## [MSA](https://github.com/3dinformatica/docway-msa/blob/master/README.md)
 
 MSA (Mail Storage Agent) è un servizio Java multi-processo che si occupa delle seguenti operazioni:
 * archiviazione delle email PEC e non (le mail vengono trasformate e salvate in documenti in DocWay XML);
@@ -132,7 +132,21 @@ MSA (Mail Storage Agent) è un servizio Java multi-processo che si occupa delle 
 * Completa gestione del processo di interfacciamento con lo SdI per le fatture elettroniche.
 MSA lavora esaminando periodicamente delle caselle di posta (certificate o meno) e dispone di una sua specifica console di amministrazione e controllo.
 
-...
+Sebbene il presente modulo sia rilasciato nella modalità open source, è possibile estendere questo servizio unicamente nello scenario DocWay e eXtraWay. 
+
+Di seguito le funzionalità offerte:
+- Architettura software, modulare, espandibile e facilmente personalizzabile tramite l'implementazione di apposite interfacce per:
+    + personalizzare il comportamento di archiviazione di caselle di posta elettronica;
+    + leggere le configurazioni delle caselle di posta (e eventualmente estenderle) su sistemi differenti da ACL;
+    + archiviare le email su sistemi differenti da DocWay.
+- Worker concorrenti in grado di effettuare l'archiviazione in parallelo di più caselle di posta abbattendo i tempi di archiviazione (in particolare nel caso di numerose caselle di posta elettronica da gestire).
+- Produzione su MongoDB di rapporti di Audit per ogni sessione di archiviazione di ogni singola casella di posta elettronica. In caso di errore verrà memorizzato l'intero EML per agevolare le operazioni di monitoraggio, controllo errori e eventuale risoluzione di problemi.
+- Console WEB di monitoraggio per individuare agevolmente le email che sono andate in errore e per effettuare nuovamente l'elaborazione.
+
+### Prerequisiti:
+1. _Java8_
+2. MongoDB (vers. 3.6.3)
+___
 
 ##### Detentori di copyright:
 
