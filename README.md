@@ -18,7 +18,7 @@ FCA (File Conversion Agent) e FCS (File Conversion Service) consistono in 2 proc
 
 Lo scenario di utilizzo può variare a seconda del carico di lavoro:
 - In ambienti di ridotte dimensioni (carico di lavoro non elevato) entrambi i processi possono essere installati (e configurati) sullo stesso server;
-- In ambienti con un elevato carico di lavoro (in termini di numero di richieste) è possibile scalare l'attività di estrazione testo e conversione su più server. In questo scenario verrà installato **una ed una sola istanza di FCA** (che si occuperà di recuperari i lavori da portare a termine) e **N istanze di FCS** (su differenti server) che si occuperanno di elaborare i file e registrare il risultato dell'attività richiesta.
+- In ambienti con un elevato carico di lavoro (in termini di numero di richieste) è possibile scalare l'attività di estrazione testo e conversione su più server. In questo scenario verrà installato **una e una sola istanza di FCA** (che si occuperà di recuperari i lavori da portare a termine) e **N istanze di FCS** (su differenti server) che si occuperanno di elaborare i file e registrare il risultato dell'attività richiesta.
 
 ### Flusso di esecuzione
 
@@ -29,7 +29,7 @@ La logica secondo la quale viene svolta tale attività è descritta di seguito:
 
 ### Descrizione dei progetti
 
-I progetti di FCA ed FCS (progetti _JAVA_) sono stati suddivisi in 2 librerie che corrispondo a:
+I progetti di FCA e FCS (progetti _JAVA_) sono stati suddivisi in 2 librerie che corrispondo a:
 - Logiche generiche utilizzatibili in differenti ambiti (progetti abstract);
 - Implementazioni specifiche per uno scenario (nel nostro caso DocWay).
 
@@ -45,14 +45,14 @@ In base alla struttura appena descritta, è quindi possibile utilizzare le libre
 #### FCS
 
 
-**it.tredi.abstract-fcs**: Elaborazione vera e propria dei files. Logiche di conversione ed estrazione testo dai file (integrazione con le varie dipendenze software).
+**it.tredi.abstract-fcs**: Elaborazione vera e propria dei files. Logiche di conversione e estrazione testo dai file (integrazione con le varie dipendenze software).
 
 **it.tredi.docway-fcs**: Implementazione per DocWay di FCS (aggiornamento dell'esito dei lavori, registrazione dei file convertiti, indicizzazione del testo contenuto negli allegati del documento, etc.).
 
 
 ### Requisiti
 
-Requisiti per l'esecuzione di conversioni ed estrazione di testo da parte di FCS:
+Requisiti per l'esecuzione di conversioni e estrazione di testo da parte di FCS:
 - OpenOffice
 - ImageMagick
 - Tesseract
@@ -60,7 +60,7 @@ Requisiti per l'esecuzione di conversioni ed estrazione di testo da parte di FCS
 
 ## [Console Audit](https://github.com/3dinformatica/auditConsole/blob/master/README.md)
 
-Web Application grazie alla quale è possibile consultare i dati di audit registrati per uno o più applicativi. L'interfaccia web realizzata permette (previa autenticazione ed autorizzazione) diversi filtri di ricerca sui risultati registrati tramite AUDIT:
+Web Application grazie alla quale è possibile consultare i dati di audit registrati per uno o più applicativi. L'interfaccia web realizzata permette (previa autenticazione e autorizzazione) diversi filtri di ricerca sui risultati registrati tramite AUDIT:
 - Filtro su archivio (nome del database)
 - Filtro su tipologia di operazione (modifica, login, etc.) - Non ci sono vincoli sulle tipologie di operazioni utilizzabili
 - Filtro su utente (operatore esecutore dell'attività)
@@ -74,7 +74,7 @@ Esempi classici di ricerche che possono essere svolte agevolmente tramite consol
 - Elenco di tutte le attività di una specifica tipologia;
 - etc.
 
-I dati di AUDTI sul database mongodb vengono registrati attraverso un'apposita librieria realizzata per DocWay. E' comunque possibile implementare una propria versione della registrazione del record di AUDIT (per un qualsiasi applicativo) ed utilizzare la console di AUDIT per la consultazione dei dati.
+I dati di AUDIT sul database mongodb vengono registrati attraverso un'apposita librieria realizzata per DocWay. È comunque possibile implementare una propria versione della registrazione del record di AUDIT (per un qualsiasi applicativo) e utilizzare la console di AUDIT per la consultazione dei dati.
 
 Altri attività previste altre alla classica ricerca sono:
 - Esportazione CSV dei dati di AUDIT;
