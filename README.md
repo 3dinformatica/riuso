@@ -4,7 +4,7 @@
 
 Nel rispetto delle novità introdotte dal piano triennale per l’informatica nella Pubblica Amministrazione e delle linee guida su acquisizione e riuso di software per le Pubbliche Amministrazioni, e grazie al supporto di ADER (Agenzia Delle Entrate/Riscossione) l'azienda ha avviato come incaricata il progetto di riuso di alcuni moduli software, sviluppati per conto di ADER ed imperniati attorno al sistema di gestione documentale e protocollo informatico DocWay.
 
-Il **progetto di riuso** si articola dunque attraverso la liberazione del **sorgente** di questi **moduli software** ed il rilascio dell'applicazione **DocWay** in formato **eseguibile**, per abilitare qualsiasi utilizzatore ad avere con pochi click ed una procedura di installazione semplificata, un sistema documentale di protocollo completo e ricco di funzionalità, compliant con la normativa e basato su standard archivistici.
+Il **progetto di riuso** si articola dunque attraverso la liberazione del sorgente di questi moduli software ed il rilascio dell'applicazione DocWay in formato eseguibile, per abilitare qualsiasi utilizzatore ad avere con pochi click ed una procedura di installazione semplificata, un sistema documentale di protocollo completo e ricco di funzionalità, compliant con la normativa e basato su standard archivistici.
 
 Allo stesso tempo i moduli dei quali viene liberato il codice sorgente, possono essere utilizzati sia in combinazione con l'applicazione documentale scaricata e rilasciata in questo repository come dipendenza al fine di estenderne le funzionalità e le capacità, sia come progetti software a se stanti, ciascuno dei quali in grado di operare ad uno strato più "generico" con specifiche finalità.
 
