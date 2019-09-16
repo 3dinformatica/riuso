@@ -12,6 +12,10 @@ La licenza di distribuzione open source scelta dall'Amministrazione è la **Affe
 
 Per ciascun modulo descritto di seguito, vengono indicate le funzionalità principali e l'architettura del modulo stesso, il flusso di esecuzione, le dipendenze, le modalità di installazione e di utilizzo così come suggerimenti per gli sviluppatori che dovessero usare il codice liberato per implementarlo in proprie applicazioni.
 
+## Istruzioni per le dipendenze eXtraWay e DocWay
+
+...
+
 ## [FCA](https://github.com/3dinformatica/docway-fca/blob/master/README.md)/[FCS](https://github.com/3dinformatica/docway-fcs/blob/master/README.md)
 
 FCA (File Conversion Agent) e FCS (File Conversion Service) consistono in 2 processi che permettono l'**estrazione del testo da files** e la **conversione di files in un differente formato** (es. da DOC a PDF). 
