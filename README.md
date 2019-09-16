@@ -146,19 +146,3 @@ Di seguito le funzionalità offerte:
 ### Prerequisiti:
 1. _Java8_
 2. MongoDB (vers. 3.6.3)
-___
-
-##### Detentori di copyright:
-
-Agenzia delle Entrate-Riscossione (ADER)
-
-##### Soggetti incaricati del mantenimento del progetto open source:
-
-| 3D Informatica srl |
-| :------------------- |
-| Via Speranza, 35 - 40068 S. Lazzaro di Savena |
-| Tel. 051.450844 - Fax 051.451942 |
-| http://www.3di.it |
-
-##### Indirizzo e-mail a cui inviare segnalazioni di sicurezza:
-tickets@3di.it
