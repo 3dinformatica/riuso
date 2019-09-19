@@ -22,7 +22,9 @@ Per ciascun modulo descritto di seguito, vengono indicate le funzionalità princ
 |[**Istruzioni per le dipendenze eXtraWay e DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)| 
 ||
 
-## [FCA](https://github.com/3dinformatica/docway-fca)/[FCS](https://github.com/3dinformatica/docway-fcs)
+## [FCA](https://github.com/3dinformatica/docway-fca)/[FCS](https://github.com/3dinformatica/docway-fcs) 
+
+###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
 
 FCA (File Conversion Agent) e FCS (File Conversion Service) consistono in due processi che permettono l'**estrazione del testo da files** e la **conversione di files in un differente formato** (es. da DOC a PDF). 
 
@@ -69,6 +71,8 @@ Requisiti per l'esecuzione di conversioni e estrazione di testo da parte di FCS:
 
 
 ## [Console Audit](https://github.com/3dinformatica/auditConsole)
+
+###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
 
 Web Application grazie alla quale è possibile consultare i dati di audit registrati per uno o più applicativi. L'interfaccia web realizzata permette (previa autenticazione e autorizzazione) diversi filtri di ricerca sui risultati registrati tramite AUDIT:
 - Filtro su archivio (nome del database)
@@ -136,6 +140,8 @@ Di seguito è descritto il formato del record di AUDIT registrato su archivio Mo
 
 ## [MSA](https://github.com/3dinformatica/docway-msa)
 
+###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
+
 MSA (Mail Storage Agent) è un servizio Java multi-processo che si occupa delle seguenti operazioni:
 * archiviazione delle email PEC e non (le mail vengono trasformate e salvate in documenti in DocWay XML);
 * scambio di documenti tra sistemi DocWay XML differenti mediante la posta elettronica certificata (interoperabilità);
@@ -158,6 +164,8 @@ Di seguito le funzionalità offerte:
 2. MongoDB (vers. 3.6.3)
 
 ## Istruzioni per le dipendenze eXtraWay e DocWay
+
+###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
 
 eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze dei moduli liberati nei diversi repository pubblicati, possono essere installati in due differenti modalità.
 
@@ -195,6 +203,8 @@ Dopo aver testato il funzionamento fare pulizia con il comando: vagrant destroy 
 ### 2. Installazione singoli pacchetti
 
 #### Istruzioni installazione eXtraWay come platform
+
+###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
 #### - Installazione su piattaforma Windows di Extraway Platform
 
@@ -843,6 +853,8 @@ Allo stato attuale risultano
 >**N.B.:** Gli elenchi riportati sono da considerarsi __meramente indicativi e non esaustivi__. 3D Informatica __non può considerarsi responsabile__ qualora nuove versioni di antivirus verificati risultassero incompatibili ne può garantire che nuove versioni degli antivirus noti come incompatibili risultino di fatto utilizzabili. Chi fosse intenzionato ad acquisire un software antivirus per proteggere le proprie installazioni eXtraWay dovrà, __sotto la propria responsabilità__, raccogliere informazioni sufficienti per garantirsi la possibilità di sottoporre a tale software liste di esclusioni quanto meno per gli aspetti funzionali.
 
 #### Istruzioni installazione DocWay
+
+###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
 #### - Installazione su piattaforma Windows di DocWay 4
 
