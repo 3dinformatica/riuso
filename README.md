@@ -12,14 +12,14 @@ La licenza di distribuzione open source scelta dall'Amministrazione è la **Affe
 
 Per ciascun modulo descritto di seguito, vengono indicate le funzionalità principali e l'architettura del modulo stesso, il flusso di esecuzione, le dipendenze, le modalità di installazione e di utilizzo così come suggerimenti per gli sviluppatori che dovessero usare il codice liberato per implementarlo in proprie applicazioni.
 
-|Repository Moduli | 
-|--- | --- 
-|[Modulo FCA](https://github.com/3dinformatica/docway-fca) | 
-|[Modulo FCS](https://github.com/3dinformatica/docway-fcs) | 
-|[Modulo Console AUDIT](https://github.com/3dinformatica/auditConsole) | 
-|[Modulo MSA](https://github.com/3dinformatica/docway-msa) | 
+|Repository Moduli| 
+|--|
+|[Modulo FCA](https://github.com/3dinformatica/docway-fca)| 
+|[Modulo FCS](https://github.com/3dinformatica/docway-fcs)| 
+|[Modulo Console AUDIT](https://github.com/3dinformatica/auditConsole)| 
+|[Modulo MSA](https://github.com/3dinformatica/docway-msa)| 
 ||
-|[**Istruzioni per le dipendenze eXtraWay e DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway) | 
+|[**Istruzioni per le dipendenze eXtraWay e DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)| 
 ||
 
 ## [FCA](https://github.com/3dinformatica/docway-fca/blob/master/README.md)/[FCS](https://github.com/3dinformatica/docway-fcs/blob/master/README.md)
@@ -165,12 +165,12 @@ eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze
 
 * installazione dei singoli pacchetti di eXtraWay e DocWay.
 
-Istruzioni per le dipendenze eXtraWay e DocWay | 
---- | --- 
-[Istruzioni installazione eXtraWay come platform](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-installazione-extraway-come-platform) | 
-[- Installazione su piattaforma Windows di Extraway Platform](https://github.com/3dinformatica/riuso/blob/master/README.md#installazione-su-piattaforma-windows-di-extraway-platform) | 
-[- Installazione su piattaforma Linux di ExtraWay Platform](https://github.com/3dinformatica/riuso/blob/master/README.md#installazione-su-piattaforma-linux-di-extraway-platform) | 
-[Istruzioni installazione DocWay](https://github.com/3dinformatica/riuso/blob/master/README.md#installazione-docway) | 
+|Istruzioni per le dipendenze eXtraWay e DocWay| 
+|--| 
+|[Istruzioni installazione eXtraWay come platform](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-installazione-extraway-come-platform)| 
+|[- Installazione su piattaforma Windows di Extraway Platform](https://github.com/3dinformatica/riuso/blob/master/README.md#installazione-su-piattaforma-windows-di-extraway-platform)| 
+|[- Installazione su piattaforma Linux di ExtraWay Platform](https://github.com/3dinformatica/riuso/blob/master/README.md#installazione-su-piattaforma-linux-di-extraway-platform)| 
+|[Istruzioni installazione DocWay](https://github.com/3dinformatica/riuso/blob/master/README.md#installazione-docway)| 
 
 ### 1. VM gestita da vagrant
 
