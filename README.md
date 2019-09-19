@@ -180,6 +180,8 @@ eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze
 |[ -- Uso di Antivirus nelle installazioni eXtraWay](https://github.com/3dinformatica/riuso/blob/master/README.md#uso-di-antivirus-nelle-installazioni-extraway)
 |[- Installazione su piattaforma Linux di ExtraWay Platform](https://github.com/3dinformatica/riuso/blob/master/README.md#--installazione-su-piattaforma-linux-di-extraway-platform)| 
 |[**Istruzioni installazione DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-installazione-docway)| 
+|[- Installazione su piattaforma Windows di DocWay4](https://github.com/3dinformatica/riuso/blob/master/README.md#--installazione-su-piattaforma-windows-di-docway-4)|
+|[- Installazione su piattaforma Linux di DocWay4](https://github.com/3dinformatica/riuso/blob/master/README.md#--installazione-su-piattaforma-linux-di-docway-4)|
 
 ### 1. VM gestita da vagrant
 ___
