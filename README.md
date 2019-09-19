@@ -22,7 +22,7 @@ Per ciascun modulo descritto di seguito, vengono indicate le funzionalità princ
 |[**Istruzioni per le dipendenze eXtraWay e DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)| 
 ||
 
-## [FCA](https://github.com/3dinformatica/docway-fca/blob/master/README.md)/[FCS](https://github.com/3dinformatica/docway-fcs/blob/master/README.md)
+## [FCA](https://github.com/3dinformatica/docway-fca)/[FCS](https://github.com/3dinformatica/docway-fcs)
 
 FCA (File Conversion Agent) e FCS (File Conversion Service) consistono in due processi che permettono l'**estrazione del testo da files** e la **conversione di files in un differente formato** (es. da DOC a PDF). 
 
@@ -68,7 +68,7 @@ Requisiti per l'esecuzione di conversioni e estrazione di testo da parte di FCS:
 - Tesseract
 
 
-## [Console Audit](https://github.com/3dinformatica/auditConsole/blob/master/README.md)
+## [Console Audit](https://github.com/3dinformatica/auditConsole)
 
 Web Application grazie alla quale è possibile consultare i dati di audit registrati per uno o più applicativi. L'interfaccia web realizzata permette (previa autenticazione e autorizzazione) diversi filtri di ricerca sui risultati registrati tramite AUDIT:
 - Filtro su archivio (nome del database)
@@ -134,7 +134,7 @@ Di seguito è descritto il formato del record di AUDIT registrato su archivio Mo
 | data | Data e Ora di svolgimento dell'azione da parte dell'utente |
 | changes | Elenco di modifiche apportate al record (per ogni campo viene indicato il valore precedente alla modifica e quello successivo) |
 
-## [MSA](https://github.com/3dinformatica/docway-msa/blob/master/README.md)
+## [MSA](https://github.com/3dinformatica/docway-msa)
 
 MSA (Mail Storage Agent) è un servizio Java multi-processo che si occupa delle seguenti operazioni:
 * archiviazione delle email PEC e non (le mail vengono trasformate e salvate in documenti in DocWay XML);
@@ -167,10 +167,11 @@ eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze
 
 |Istruzioni per le dipendenze eXtraWay e DocWay| 
 |--| 
-|[Istruzioni installazione eXtraWay come platform](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-installazione-extraway-come-platform)| 
-|[- Installazione su piattaforma Windows di Extraway Platform](https://github.com/3dinformatica/riuso/blob/master/README.md#installazione-su-piattaforma-windows-di-extraway-platform)| 
+|[**Istruzioni installazione eXtraWay come platform**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-installazione-extraway-come-platform)| 
+|[- Installazione su piattaforma Windows di Extraway Platform](https://github.com/3dinformatica/riuso/blob/master/README.md#installazione-su-piattaforma-windows-di-extraway-platform)|
+|[ -- Uso di Antivirus nelle installazioni eXtraWay]()
 |[- Installazione su piattaforma Linux di ExtraWay Platform](https://github.com/3dinformatica/riuso/blob/master/README.md#installazione-su-piattaforma-linux-di-extraway-platform)| 
-|[Istruzioni installazione DocWay](https://github.com/3dinformatica/riuso/blob/master/README.md#installazione-docway)| 
+|[**Istruzioni installazione DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#installazione-docway)| 
 
 ### 1. VM gestita da vagrant
 
@@ -760,4 +761,412 @@ Es. script backup da inserire nel crontab di root:
     /etc/init.d/extraway-fcs start  
     /etc/init.d/tomcat6 start
 
+#### Uso di Antivirus nelle installazioni eXtraWay
+
+La presenza di un antivirus nelle installazioni della piattaforma eXtraWay può comportare due distinti ordini di problemi: di natura prestazionale e di natura funzionale.
+
+**Aspetto Prestazionale**
+I software antivirus più diffusi eseguono scansioni "Real-time" sul sistema operativo e sui processi. Può accadere quindi che scansioni e blocchi troppo invasivi rallentino o fermino del tutto i componenti Tomcat (applicativo) o eXtraWay (motore del database).
+
+**Aspetto Funzionale**
+È prassi comune che gli antivirus riconoscano come comportamento rischioso, potenzialmente maligno, uno dei comportamenti del server eXtraWay. Per ovviare a quest'inconveniente è necessario agire sulle impostazioni dell'antivirus.
+
+**Esclusioni**
+Per poter utilizzare comunque il software antivirus è necessario impostare una o più liste di esclusione: esistono principalmente 2 tipi di lista a seconda del software utilizzato. Esse si riferiscono ai files/cartelle delle quali non si richiede che venga compiuta verifica e l'elenco degli eseguibili che possono essere considerati affidabili.
+
+##### Interventi di tipo prestazionale
+È evidente come l'attività di un antivirus non possa essere priva di impatti sulle prestazioni dell'intero sistema. In particolare, gran parte degli antivirus operano in tempo reale ed intercettano, per così dire, tutte le operazioni di lettura e scrittura che hanno luogo sui dischi. Ciò comporta un naturale rallentamento di tali processi.
+
+Per non incorrere in limitazioni prestazionali, ed in generale considerando la natura dei dati scritti da eXtraWay, gli antivirus possono (e dovrebbero) essere configurati per ignorare l'attività afferente alle cartelle che ospitano i dati, gli indici e le registrazioni di servizio((Quali, ad esempio, le cartelle dei logs etc. etc.))
+
+###### Lista esclusioni per cartelle
+
+È necessario impostare come esclusione la cartella del database, la cartella degli eseguibili e le cartelle dei file temporanei:
+
+|Cartella|Contenuto|
+|--|--|
+|\3di.it\extraway\xw\db  |Cartella database eXtraWay  |
+|\3di.it\extraway\xw\bin  |Cartella eseguibili eXtraWay  |
+|\3di.it\extraway\xw\logs  |Cartella logs eXtraWay  |
+|\3di.it\extraway\xw\xreg  |Dove presente, cartella di servizio per il registro di  eXtraWay  |
+|\3di.it\extraway\xw\lazy  |Dove presente, cartella di servizio per le attività *near on line* di  eXtraWay  |
+|\Programmi\Apache Software Foundation\Tomcat 6.0\bin  |Cartella eseguibili Apache Tomcat  |
+|\Programmi\Apache Software Foundation\Tomcat 6.0\work  |Cartella cache Tomcat  |
+|*%temp*%\hwtemp  |Cartella file temporanei di eXtraWay  |
+
+La cartella *%temp%* solitamente corrisponde a \windows\temp ma dipende direttamente dall'impostazione della variabile di sistema Windows.
+
+##### Interventi di tipo Funzionale
+Come precedentemente annunciato un comportamento del modulo eXtraWay Server viene considerato malevolo dalla maggioranza degli antivirus.
+ 
+L'architettura di eXtraWay Server prevede che esista un'istanza del modulo in ascolto per nuove connessioni. Quando un'applicazione client richiede una nuova connessione il server in ascolto, detto *Master*, duplica se stesso producendo una copia figlia, detta *Slave*, che di fatto instaura la connessione con l'applicazione client e ne esegue le richieste.
+
+ Il processo così generato eredita dal processo principale alcune risorse condivise.
+ 
+Un simile comportamento viene considerato pericoloso in quanto rappresenta uno dei più comuni sistemi che hanno i virus per avviare processi in grado di produrre danni e/o appropriarsi di importanti informazioni presenti nel sistema.
+ 
+Per ovviare a questo bisogna necessariamente istruire il sistema antivirus perché consideri eXtraWay Server come processo affidabile, quindi *trusted*, e non ne impedisca il corretto comportamento.
+
+###### Lista esclusioni per eseguibili
+
+È necessario impostare come esclusione l'eseguibile di eXtraWay e l'eseguibile di Tomcat
+
+|Modulo|
+|--|
+|\3di.it\extraway\xw\bin\xw.exe|
+|\Programmi\Apache Software Foundation\Tomcat 6.0\bin\tomcat6.exe|
+
+I percorsi in entrambe le liste possono variare a seconda delle installazioni, tuttavia è possibile recuperare l'esatta posizione controllando nelle proprietà dei servizi di Windows.//
+
+##### Configurazioni antivirus già testate con eXtraWay
+
+Nel corso del tempo sono state verificate diverse installazioni nelle quali è stato possibile compiere con successo gli interventi descritti nei capitoli precedenti.
+
+Dal momento che ogni software antivirus ha propria configurazione e che essi evolvono naturalmente nel tempo, non viene descritto in questa sede il procedimento da seguire rimandando il dettaglio alla documentazione degli stessi.
+
+**Antivirus efficacemente verificati:**
+
+  * Norton Antivirus
+  * NOD32 (Versione esistente al 2010)
+  * Kaspersky Anti-Virus
+
+Va altresì detto che qualora un antivirus imponga limiti funzionali ma senza dare la possibilità di compilare liste di esclusione, esso risulta di fatto incompatibile con le installazioni eXtraWay.
+
+Allo stato attuale risultano
+
+**Antivirus incompatibili:**
+
+  * Panda Antivirus Titanum 2004
+
+-------
+
+>**N.B.:** Gli elenchi riportati sono da considerarsi __meramente indicativi e non esaustivi__. 3D Informatica __non può considerarsi responsabile__ qualora nuove versioni di antivirus verificati risultassero incompatibili ne può garantire che nuove versioni degli antivirus noti come incompatibili risultino di fatto utilizzabili. Chi fosse intenzionato ad acquisire un software antivirus per proteggere le proprie installazioni eXtraWay dovrà, __sotto la propria responsabilità__, raccogliere informazioni sufficienti per garantirsi la possibilità di sottoporre a tale software liste di esclusioni quanto meno per gli aspetti funzionali.
+
 #### Istruzioni installazione DocWay
+
+#### - Installazione su piattaforma Windows di DocWay 4
+
+##### Requisiti Hardware
+
+Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo. In linea di massima le prestazioni di DocWay 4 dipendono dalla velocità dei dispositivi di memorizzazione, dalla velocità della rete e, per la gestione di allegati non testuali, dalla memoria RAM.
+
+###### Requisiti Minimi
+
+* Processore Intel Xeon 2.00 Ghz o compatibile
+* 4 GB di RAM
+* Disco rigido dedicato con almeno 150 GB (per un archivio medio con allegati)
+
+###### Consigliati
+
+Per un utilizzo medio: circa 30 utenti collegati contemporaneamente, un milione documenti.
+
+* Processore Intel Xeon Quad Core o compatibile
+* 8 GB di RAM
+* Almeno 3 dischi SATA in RAID 5 o un sistema alternativo di memorizzazione
+* Almeno 300 GB sul sistema di memorizzazione scelto
+* Scheda di rete Gigabit o superiore
+* Alimentazione tramite gruppo di continuità
+
+##### Requisiti software
+
+**Server**
+
+* Windows server 2003 sp2 con Internet Information Server 6.0
+* Windows server 2008 r2 64bit con Internet Information Server 7.5
+* Windows server 2012 64bit con Internet Information Server 8
+* Antivirus che possa essere configurato con eccezioni per quanto riguarda il controllo dei processi (Panda sembra essere problematico da questo punto di vista)
+* Accesso tramite remote desktop o vnc((Nel caso si voglia usufruire dell'assistenza da remoto da parte di 3DI))
+* DBMS a scelta tra Mysql, PostGreSQL, Oracle (per il supporto ai workflow)
+
+**Client**
+
+Macchina client con collegamento di rete diretto al server, si sconsiglia l'utilizzo di indirizzi mappati con tecnologia NAT.
+
+**Browser supportati**
+
+* Internet Explorer 9
+* Internet Explorer 10
+* Internet Explorer 11
+* Mozilla Firefox ((per un funzionamento ottimale potrebbe essere richiesto un aggiornamento alla versione attuale))
+* Chrome/Chromium ((per un funzionamento ottimale potrebbe essere richiesto un aggiornamento alla versione attuale))
+
+Per maggiori dettagli relativi al supporto browser, consultare la [[documentazione_3di:docway4:browser_compat|seguente pagina]].
+
+**Plugin Java**
+
+Per usufruire di alcune funzionalità (firma digitale dei file, per esempio) è necessario installare un [[http://java.com| Java Runtime Environment]] col relativo plugin per i vari browser.
+
+**Plugin IWX**
+
+Per poter utilizzare appieno le funzionalità dell'applicativo, è possibile installare il plugin IWX, che integra, tra le altre, funzionalità di stampa e scansione diretta di documenti in DocWay 4.
+Per installarlo è necessario scaricare il pacchetto di installazione MSI dall'interfaccia di DocWay 4 ((Il link di scaricamento diventa visibile nella schermata di creazione/modifica di un documento o all'apertura di un documento contenente allegati)) e disporre di diritti amministrativi sulla macchina.
+
+##### Installazione
+
+**Anatomia del pacchetto di installazione**
+
+Il pacchetto di installazione contiene i moduli di DocWay4 suddivisi in cartelle, di seguito la funzione di ogni componente:
+
+* Contiene il Java Runtime Environment.
+* contiene un modulo microsoft per la trasformazione degli xml con fogli di stile (formato .msi).
+* contiene l'eseguibile per l'installazione di LibreOffice, utilizzato per la conversione degli allegati.
+* contiene le indicazioni su come avviare un flusso documentale di prova.
+* contiene l'applicativo Apache Tomcat che ospita l'applicazione java.
+* contiene i pacchetto Microsoft Visual C++ 2008/2010 Redistributable, che devono essere installati (se non già presenti) per il corretto funzionamento dei componenti.
+* contiene le applicazione java per DocWay4 e i loro file di contesto DocWay4.xml e DocWay4-service.xml da utilizzare con tomcat.
+* contiene i due servizi che compongono il sistema di conversione/indicizzazione dei file, FCA e FCS.
+* contiene le utility di terze parti per la conversione degli allegati.
+* contiene il modulo per l'archiviazione delle mail (MailStorage)
+* contiene il modulo per l'esportazione del registro di protocollo (RIP)
+* cartella dove è possibile installare il modulo aggiuntivo dei webservice
+* cartella contenente il server per il database eXtraWay.
+* Contiene l'archivio utilizzato dall'applicativo.
+* contiene librerie di terze parti per la manipolazione degli xml e la compressione di files con le rispettive licenze d'uso.
+* Contiene i componenti aggiuntivi utilizzati da IIS per comunicare direttamente con tomcat. Al suo interno è presente una directory [bin] dove sono contenute le estensioni per IIS.
+
+###### Root di installazione
+
+Consigliamo di installare i nostri applicativi in un disco separato rispetto a quello di sistema (C:) per motivi di performance. Nel seguito, si assumerà che l'installazione venga posizionata nel disco **E:**.
+
+###### Java
+
+Eseguire il setup di java dalla cartella jre del cd.
+
+
+Non è necessario cambiare alcuna configurazione durante l'esecuzione del setup. 
+Di base il Java Runtime Environment ha come destinazione 
+
+    C:\Programmi\Java\jre7  
+
+
+###### Tomcat
+
+Eseguire il setup di Tomcat dalla cartella del cd. Durante l'installazione sarà necessario:
+
+* modificare il tipo di installazione selezionando come componenti aggiuntivi "Service", che permette l'avvio automatico come servizio di Tomcat e "Native" che installa le librerie APR native per ottenere maggiori performance e scalabilità.
+* Lasciare invariate le porte di default e gli altri parametri, a meno di particolari esigenze.
+* Selezionare il percorso di un Java Runtime Environment già installato nel sistema per avviare Tomcat (ovvero, quello installato al punto precedente della guida).
+* Modificare la directory di destinazione: nonostante questo non sia necessario, consigliamo di installare Tomcat all'interno dalla root di installazione prescelta (i.e. E:), nel percorso E:\programmi\Apache Software Foundation\Tomcat 7.0.
+
+
+Una volta terminata l'installazione si dovranno impostare altre opzioni tramite "Configure Tomcat" dal menù delle Applicazioni: 
+
+* nella prima pagina "General" verificare che l'avvio di Tomcat sia impostato su automatico;
+
+* nella pagina "Java":
+  - Indicare "1024" in "Maximum Memory Pool".((La quantità di memoria massima che Tomcat può utilizzare in sistemi Windows a 32 bit non dovrebbe mai essere impostata a più di 1GB. Tuttavia è consigliabile non impostare un valore troppo basso, per evitare che durante lo scaricamento o l'inserimento di allegati, si esaurisca la memoria disponibile. Questo valore può essere aumentato tranquillamente su sistemi a 64 bit con java a 64 bit.))
+  - (Consigliato) aumentare l'initial memory pool da 128MB ad un valore compreso tra 512MB e il Maximum Memory Pool precedentemente impostato. In questo modo, Tomcat allocherà subito questo quantitativo di memoria ad ogni suo avvio, evitando di dover riallocare varie volte la memoria per arrivare alla dimensione specificata in Maximum Memory Pool.
+
+Per poter utilizzare l'utente base di Tomcat (solitamente admin) come utente amministratore di DocWay4 è necessario inserire i valori "jspuser" e "admjspuser" al file E:\Programmi\Apache Software Foundation\Tomcat 7.0\conf\tomcat-users.xml:
+
+    <user username="admin" password="xxxxxx" roles="admin,manager-gui,jspuser,admjspuser"/>
+
+**Cifratura delle password nel tomcat-users.xml**
+
+Di base le password all'interno del file tomcat-users.xml sono in chiaro, per abilitare la cifratura è necessario inserire il parametro "digest=MD5" nel server.xml di Tomcat:
+
+    <!-- This Realm uses the UserDatabase configured in the global JNDI resources under the key "UserDatabase".  
+    Any edits that are performed against this UserDatabase are immediately available for use by the Realm.  -->  
+    <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase" digest="MD5"/>
+
+* Inserire il parametro "digest=MD5" all'interno dell'attributo "Realm" (UserDatabase)" nel file e:\Programmi\Apache Software Foundation\Tomcat 6.0\conf\server.xml
+
+Qualora si abilitasse la cifratura bisognerà quindi scrivere la corrispondente password cifrata con l'algoritmo MD5 nel campo password di  **tomcat-users.xml**
+
+**Abilitare permessi di scrittura sul tomcat-users.xml**
+
+Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il permesso di scrittura è necessario inserire il parametro "readonly=false" nel server.xml di Tomcat:
+
+    <GlobalNamingResources>  
+    <!-- Editable user database that can also be used by  
+    UserDatabaseRealm to authenticate users  
+    -->  
+    
+    <Resource name="UserDatabase" auth="Container"  
+    type="org.apache.catalina.UserDatabase"  
+    description="User database that can be updated and saved"  factory="org.apache.catalina.users.MemoryUserDatabaseFactory"  pathname="conf/tomcat-users.xml" readonly="false" />  
+    </GlobalNamingResources>
+
+* Inserire il parametro "readonly=false" all'interno dell'attributo "Realm" (UserDatabase)" nel file e:\Programmi\Apache Software Foundation\Tomcat 6.0\conf\server.xml
+
+**Docway**
+
+Di base l'applicativo viene installato nel disco dedicato che per comodità indicheremo come e:
+
+* Copiare la cartella 3di.it dal cd in e:\
+
+Per fare in modo che tomcat visualizzi l'applicazione è necessario copiare il file di configurazione **xway.xml** all'interno della cartella di configurazione di tomcat:
+
+* questo file è utilizzato per localizzare l'applicativo sul disco, al suo interno sono presenti dei percorsi che vanno valorizzati in relazione alla posizione della applicazione. Ad esempio:
+
+    <Context path="/xway" docBase="e:/3di.it/DocWay4/xway" debug="0" privileged="true">  
+    <ResourceLink name="xway" global="UserDatabase" type="org.apache.catalina.UserDatabase"/>  
+    <!--  
+    Uncomment this Valve to limit access to this app to localhost for security reasons.  
+    Allow may be a comma-separated list on hosts (or even regular expressions).  
+    -->  
+    <!--  
+    <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127.0.0.1,localhost"/>  
+    -->  
+    </Context>
+
+* Copiare dalla cartella e:\3di.it\DocWay4\xway il file xway.xml nella cartella e:\programmi\Apache Software Foundation\Tomcat 6.0\conf\Catalina\localhost\ (da creare)
+
+**Mail Archiver**
+
+Il modulo Mail Storage Agent (MSA) consente di inserire delle mail all'interno del protocollo, semplicemente spedendole ad un indirizzo creato ad hoc.
+
+All'interno della cartella **e:\3di.it\docway_extra\MailStorage\bin\/** si trova lo script **install.bat** per l'installazione automatica del modulo MSA:
+
+    @echo off  
+    @rem TODO:  
+    @rem impostare INSTDIR  
+    @rem verificare la variabile d'ambiente JAVA_HOME, se assente inserirlo nel presente file  
+    @rem verificare percorso del file di log in classes/log4j.properties  
+    set JVMDLL=C:\Progra~1\Java\jre6\bin\client\jvm.dll  
+    set INSTDIR=e:/3di.it/DocWay4/MailStorage  set MY_JAVA_HOME=%INSTDIR%/lib
+
+* Inserire per la variabile "JVMDLL" il valore "C:\Progra~1\Java\jre6\bin\client\jvm.dll"
+* Inserire per la variabile "INSTDIR" il valore "e:/3di.it/DocWay4/MailStorage"
+* Eseguire lo script per installare il modulo
+
+**Registro di Protocollo**
+
+Il modulo per esportare il registro di protocollo (RIP) risiede solitamente nel percorso **e:\3di.it\DocWay4\rip**.
+
+Nella cartella **E:\3di.it\docway_extra\rip\bin\/** si trova il file **rip.bat**. Come nel caso dell'MSA è necessario impostare i percorsi in modo corretto:
+
+    @echo off  
+    @rem TODO:  
+    @rem impostare INSTDIR  
+    @rem verificare la variabile d'ambiente JAVA_HOME, se assente inserirlo nel presente file  
+    @rem verificare percorso del file di log in classes/log4j.properties  
+    @rem impostare eventuali parametri nella variabile PARAMETERS  
+    set JAVA_HOME=C:\Programmi\Java\jre6  
+    set INSTDIR=E:/3di.it/DocWay4/rip  
+    set MY_JAVA_HOME=%INSTDIR%/lib
+
+* Impostare alla variabile "JAVA_HOME" il valore "C:\Programmi\Java\jre6"
+* Impostare alla variabile "INSTDIR" il valore "E:/3di.it/DocWay4/rip"
+
+__Per poter usufruire di questo servizio, è necessario inserirlo nelle operazioni pianificate di windows__:
+
+* Inserire il file e:\3di.it\DocWay4\rip\bin\rip nelle operazioni pianificate di Windows, in modo che sia eseguito ciclicamente (si consiglia un esportazione giornaliera)
+
+**Microsoft Visual C++ 2008 Redistributable**
+
+Prima dell'installazione del servizio extraxay sarà necessario installare dal CD Microsoft Visual C++ 2008 Redistributable, eseguendo vcredist_x86.exe dalla cartella msvc9
+
+**Extraway**
+
+Il server per il database solitamente risiede nella cartella **e:/3di.it/extraway/**.
+
+L'Extraway server richiede alcune librerie di sistema per funzionare. Per installarle è sufficiente lanciare l'eseguibile xw3dp-setup.exe e seguire le instruzioni.
+
+* Eseguire e:\3di.it\extraway\xw\bin\xw.exe
+
+Per poter installare il servizio extraway è necessario eseguire il setup dal percorso **e:\3di.it\extraway\xw\bin**:
+
+* Eseguire e:\3di.it\extraway\xw\bin\HISETUP.exe
+* Premere il tasto "Installa / Avvia" e chiudere il setup
+
+##### Servizi di Conversione dei file (FCA, FCS, LibreOffice)
+
+**Installazione di LibreOffice**
+
+Il [[ftp://ftp.3di.it/extra/libreoffice/LibO_3.3.1_Win_x86_install_multi.exe | pacchetto LibreOffice 3.3.1]] è disponibile per l'installazione dal [[ftp://ftp.3di.it/ | sito ftp 3DI]].
+
+* Eseguire il setup di LibreOffice
+* Scegliere l'installazione personalizzata e inserire come percorso e:\LibreO~1.org
+
+>ATTENZIONE: per il funzonamento di fcs è necessario che LibreOffice sia installato in un percorso corto (Questo problema è causato dalle limitazioni della shell di windows)
+
+**Inoltre il percorso non deve assolutamente contenere spazi in quanto non possono essere usare le virgolette nel file install.bat per definire il path di libreoffice/openoffice**
+
+Non sono necessarie altre modifiche alle impostazioni del setup di LibreOffice.
+
+**File Conversion Agent (FCA)**
+
+Il modulo FCA risiede nella cartella **e:\3di.it\platform\fca**, come nel caso dell'MSA, nel percorso **e:\3di.it\platform\fca\bin** è presente il file **install.bat**:
+
+    @echo off
+    set _W=e:\3di.it\platform\fca
+    set xwbin=e:\3di.it\extraway\xw\bin
+
+    @rem set JAVA_HOME =
+    @rem impostarla come variabile di sistema, altrimenti scrivere il percorso esplicito nella variabile sottostante
+    set _J=C:\Progra~1\Java\jre6\bin\client\jvm.dll
+    call fca.bat
+
+* Inserire per la variabile "_J" il valore "C:\Progra~1\Java\jre6\bin\client\jvm.dll"
+* Inserire per la variabile "_W" il valore "e:\3di.it\platform\fca"
+* Inserire per la variabile "xwbin" il valore "e:\3di.it\extraway\xw\bin"
+* Eseguire lo script per installare il modulo
+
+**File Conversion Service (FCS)**
+
+Il modulo FCS risiede nella cartella **e:\3di.it\platform\fcs**, come nei casi precedenti, nel percorso **e:\3di.it\platform\fcs\bin** è presente il solito file **install.bat** (si riporta solo la dichiarazione delle variabili da configurare della versione distribuita a partire dalla release //3.6.1.0// di FCS):
+
+    ...
+    set _W=E:\3di.it\platform\fcs
+    set _O=E:\LibreO~1.org
+
+    rem set JAVA_HOME =
+    rem impostarla come variabile di sistema, altrimenti scrivere il percorso esplicito nella variabile sottostante
+    set _J=%JAVA_HOME%\jre\bin\server\jvm.dll
+
+    rem CLASSPATH per OO 2
+    rem set _L=..........
+
+    rem CLASSPATH per OO 3
+    rem set _L=..........
+
+    ...
+
+* Inserire per la variabile "_J" il valore "C:\Progra~1\Java\jre6\bin\client\jvm.dll"
+* Inserire per la variabile "_W" il valore "E:\3di.it\platform\fcs"
+* Inserire per la variabile "_O" il valore "E:\LibreO~1.org" (come da installazione LibreOffice)
+* Eseguire lo script per installare il modulo
+
+Per poter utilizzare l'FCS inoltre è necessario installare alcune librerie nel sistema:
+
+* Copiare il contenuto della cartella e:\3di.it\platform\fcs\bin\system32 dal CD nella cartella di sistema di windows c:\windows\system32
+
+**Imagemagick e Tesseract**
+
+Per poter utilizzare alcune delle funzionalità di conversione degli allegati sono necessari questi componenti che si trovano all'interno della cartella **fcs_utils** del cd. Si consiglia di installare queste utility in **e:\programmi**. Tesseract dalle ultime versioni è integrato all'interno della cartella platform mentre per imagemagick esiste un setup.exe. Nel caso si vogliano modificare i percorsi di installazione sarà necessario modificare di conseguenza il file **e:\3di.it\platform\fcs\classes\it.extrawaytech.fcs.properties**.
+
+* Installare Imagemagick in e:\programmi
+
+**Msxml**
+
+La libreria msxml è necessaria per la trasformazione dell'xml a livello server. Eseguire il setup dalla cartella omonima del cd, non è necessario modificare nulla nelle impostazioni del setup.
+* Installare Msxml utilizzando il setup nella cartella msxml del CD
+
+**Registrazione del servizio eXtraWay**
+
+Per poter utilizzare il modulo xw è necessario effettuare la registrazione:
+
+* Eseguire e:\3di.it\extraway\xw\bin\xw.exe
+
+Nel System tray apparirà un icona con il logo di eXtraWay, con il tasto sinistro del mouse sopra l'icona si aprirà una schermata
+
+* Premere il pulsante "Registration" (Il pulsante nelle versioni precedenti è "Aggiorna licenza").
+
+Si aprirà un altra finestra col nome "eXtraWay Server Installation" che richiede "Insert the number of workstations to activate". Il numero di postazioni indica il numero di istanze massime che possono essere attive in contemporanea sul server((Per convenzione di solito questo numero è il numero massimo degli utenti contemporanei  che utilizzeranno il server diviso 15 e può dipendere anche dalle prestazioni della macchina)).
+
+* Inserire il numero di postazioni massime
+* Inserire il numero di serie (se presente)
+* Inserire il nome del responsabile e l'organizzazione
+
+Una volta completata la registrazione compare una finestra "registrazione completata" al di sotto della prima finestra, premere ok per chiudere la procedura.
+
+##### Ordine di avvio dei servizi
+
+L'ordine per effettuare l'avvio dei servizi tramite l'utility **services.msc** è il seguente:
+
+* eXtraWay server
+* eXtraWay FCS
+* eXtraWay FCA
+* eXtraWay Mail Archiver
+* Tomcat
