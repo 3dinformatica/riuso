@@ -12,10 +12,6 @@ La licenza di distribuzione open source scelta dall'Amministrazione è la **Affe
 
 Per ciascun modulo descritto di seguito, vengono indicate le funzionalità principali e l'architettura del modulo stesso, il flusso di esecuzione, le dipendenze, le modalità di installazione e di utilizzo così come suggerimenti per gli sviluppatori che dovessero usare il codice liberato per implementarlo in proprie applicazioni.
 
-## Istruzioni per le dipendenze eXtraWay e DocWay
-
-...
-
 ## [FCA](https://github.com/3dinformatica/docway-fca/blob/master/README.md)/[FCS](https://github.com/3dinformatica/docway-fcs/blob/master/README.md)
 
 FCA (File Conversion Agent) e FCS (File Conversion Service) consistono in due processi che permettono l'**estrazione del testo da files** e la **conversione di files in un differente formato** (es. da DOC a PDF). 
@@ -150,3 +146,304 @@ Di seguito le funzionalità offerte:
 ### Prerequisiti:
 1. _Java8_
 2. MongoDB (vers. 3.6.3)
+
+## Istruzioni per le dipendenze eXtraWay e DocWay
+
+eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze dei moduli liberati nei diversi repository pubblicati, possono essere installati in due differenti modalità.
+
+* creazione di una VM gestita da Vagrant, che consente l'installazione completa delle dipendenze (eXtraWay e DocWay) e di tutti i moduli presenti (FCA/FCS, MSA, AUDIT, BRIDGE).
+
+* installazione dei singoli pacchetti di eXtraWay e DocWay.
+
+### 1. VM gestita da vagrant
+
+Installazione VirtualBox       https://www.virtualbox.org/
+
+Installazione Vagrant          https://www.vagrantup.com/
+
+
+1) Dopo aver installato le due applicazioni installare il plugin che permette a Vagrant di comunicare con virtualbox
+
+
+    - Da una shell lanciare: vagrant plugin install vagrant-vbguest
+
+
+2) Posizionarsi dentro la cartella appena scaricata e lanciare il comando: vagrant up
+
+
+Dopo aver testato il funzionamento fare pulizia con il comando: vagrant destroy --force
+
+
+### 2. Installazione singoli pacchetti
+
+#### Istruzioni installazione eXtraWay come platform
+
+##### Installazione su piattaforma Windows di Extraway Platform
+
+###### Requisiti Hardware
+
+Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo. In linea di massima le prestazioni di Extraway dipendono dalla velocità dei dispositivi di memorizzazione, dalla velocità della rete e, per la gestione di allegati non testuali, dalla memoria RAM.
+
+###### Requisiti Minimi
+
+* Processore Intel Xeon 2.00 Ghz o compatibile
+* 2 GB di RAM
+* Disco rigido dedicato con almeno 100 GB (per un archivio medio con allegati)
+
+###### Consigliati
+
+Per un utilizzo medio: circa 30 utenti collegati contemporaneamente, un milione di documenti.
+
+  * Processore Intel Xeon multicore o compatibile
+  * 4 GB di RAM
+  * Almeno 3 dischi SATA in RAID 5 o un sistema alternativo di memorizzazione
+  * Almeno 300 GB sul sitema di memorizzazione scelto
+  * Scheda di rete Gigabit o superiore
+  * Alimentazione tramite gruppo di continuità
+
+###### Requisiti software
+
+**Server**
+
+* Windows server 2003 sp2
+
+* Windows server 2008 r2 64bit
+
+* Windows server 2012 64bit
+
+* Antivirus che possa essere configurato con eccezioni per quanto riguarda il controllo dei processi (ad esempio panda non funziona)
+
+* Accesso tramite remote desktop o vnc((Nel caso si voglia usufruire dell'assistenza da remoto da parte di 3DI))
+
+###### Installazione
+
+**Pacchetto eXtraWay Platform**
+
+Il pacchetto ExtraWay Platform è suddiviso in cartelle, di seguito la funzione di ogni componente:
+
+* **jre:** Contiene il Java Runtime Environment (jre-1_6_0_20).
+* **LibreOffice:** contiene l'eseguibile per l'installazione di LibreOffice, utilizzato per la conversione degli allegati.
+* **tomcat:** contiene l'applicativo Apache Tomcat che ospita l'applicazione java.
+* **3di.it\console\xway:** contiene la console java e il suo file di contesto xway.xml da utilizzare con tomcat.
+* **3di.it\platform:** contiene i due servizi che compongono il sistema di conversione/indicizzazione dei file, FCA e FCS.
+* **3di.it\webservices:** al suo interno sono presenti, il client e il servizio SOAP, che pubblicano I metodi di accesso diretto a Extraway, e danno la possibilità di interfacciare applicativi esterni sulla base documentale.
+* **3di.it\extraway\xw:** cartella contenente il server per il database eXtraWay.
+* **3di.it\extraway\xw\db:** Contiene un archivio di esempio con alcuni record di esempio, utilizzabile con i webservices.
+* **xw3rdparts:** contiene librerie di terze parti per la manipolazione degli xml e la compressione di files con le rispettive licenze d'uso.
+* **fcs_utils:** contiene contiene le utility di terze parti per la conversione degli allegati.
+___
+**Java**
+
+Eseguire il setup di java dalla cartella Jre del pacchetto.
+
+Non è necessario cambiare alcuna configurazione durante l'esecuzione del setup. Di base il Java Runtime Environment ha come destinazione <color #004000>C:\Programmi\Java\jre6\</color>.
+___
+**Tomcat**
+
+Eseguire il setup di tomcat dalla cartella del pacchetto. Anche qui non è necessario modificare alcuna impostazione durante l'esecuzione del setup and eccezione della cartella di destinazione: **e:\Programmi\Apache Software Foundation\Tomcat 6.0**
+
+* Cambiare la directory di installazione di Tomcat in **e:\Programmi\Apache Software Foundation\Tomcat 6.0**
+
+Una volta terminata l'installazione apparirà un icona con il logo di Apache Tomcat nel System Tray.
+
+* Col tasto destro del mouse accedere al menu **"Configure..."**
+
+Nella prima pagina **"General"** l'avvio di Tomcat è impostato su **manuale**:
+
+* Cambiare l'impostazione **"Startup Type"** in **"Automatic"**.
+
+Nella pagina **"Java"**:
+
+* Indicare il percorso: **C:\Programmi\Java\jre6\bin\client\jvm.dll in "Java Virtual Machine"**.
+* Indicare "1024" in "Maximum Memory Pool". (La quantità di memoria massima che Tomcat può utilizzare non dovrebbe mai essere impostata a meno di 1GB, per evitare che, durante lo scaricamento o l'inserimento di file molto grandi, si esaurisca la memoria disponibile. Tuttavia questo valore può essere aumentato se c'è disponibilità sul sistema.)
+
+Per poter utilizzare l'utente base di Tomcat (solitamente admin) per accedere alla console è necessario inserire il valore "admin" al file **tomcat-users.xml**:
+
+    <user username="admin" password="xxxxxx" roles="admin,manager"/>
+
+* Inserire nel valore **role** dell'utente admin nel file **e:\Programmi\Apache Software Foundation\Tomcat 6.0\conf\tomcat-users.xml** il valore **admin**.
+
+###### Cifratura delle password nel tomcat-users.xml
+
+Di base le password all'interno del file tomcat-users.xml sono in chiaro, per abilitare la cifratura è necessario inserire il parametro "digest=MD5" nel server.xml di Tomcat:
+
+    <!-- This Realm uses the UserDatabase configured in the global JNDI resources under the key "UserDatabase".  
+    Any edits that are performed against this UserDatabase are immediately available for use by the Realm.  -->  
+    <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase" digest="MD5"/>
+
+* Inserire il parametro **"digest=MD5"** all'interno dell'attributo **"Realm"** (UserDatabase)" nel file **e:\Programmi\Apache Software Foundation\Tomcat 6.0\conf\server.xml**
+
+###### Abilitare permessi di scrittura sul tomcat-users.xml
+
+Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il permesso di scrittura è necessario inserire il parametro **"readonly=false"** nel server.xml di Tomcat:
+
+    <GlobalNamingResources>  
+    <!-- Editable user database that can also be used by  
+    UserDatabaseRealm to authenticate users  
+    -->  
+    <Resource name="UserDatabase" auth="Container"  
+    type="org.apache.catalina.UserDatabase"  
+    description="User database that can be updated and saved"  
+    factory="org.apache.catalina.users.MemoryUserDatabaseFactory"  
+    pathname="conf/tomcat-users.xml" readonly="false" />  
+    </GlobalNamingResources>
+
+* Inserire il parametro **"readonly=false"** all'interno dell'attributo **"Realm"** (UserDatabase) nel file **e:\Programmi\Apache Software Foundation\Tomcat 6.0\conf\server.xml**
+___
+**Console**
+
+Di base l'applicativo viene installato nel disco dedicato che per comodità indicheremo come e:
+
+* Copiare la cartella 3di.it dal cd in e:\
+
+Per fare in modo che tomcat visualizzi l'applicazione è necessario copiare il file di configurazione **xway.xml** all'interno della cartella di configurazione di tomcat:
+
+questo file è utilizzato per localizzare l'applicativo sul disco, al suo interno sono presenti dei percorsi che vanno valorizzati in relazione alla posizione della applicazione. Ad esempio:
+
+    <Context path="/xway" docBase="e:/3di.it/console/xway" debug="0" privileged="true">  
+    <ResourceLink name="xway" global="UserDatabase" type="org.apache.catalina.UserDatabase"/>  
+    <!--  
+    Uncomment this Valve to limit access to this app to localhost for security reasons.  
+    Allow may be a comma-separated list on hosts (or even regular expressions).  
+    -->  
+    <!--  
+    <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127.0.0.1,localhost"/>  
+    -->  
+    </Context>
+
+* Copiare dalla cartella e:\3di.it\console\xway il file xway.xml nella cartella e:\programmi\Apache Software Foundation\Tomcat 6.0\conf\Catalina\localhost\
+___
+**Microsoft Visual C++ 2008 Redistributable**
+
+Prima dell'installazione del servizio extraxay sarà necessario installare dal pacchetto Microsoft Visual C++ 2008 Redistributable, eseguendo **vcredist_x86.exe dalla cartella msvc9**
+___
+**Extraway**
+
+Il server per il database solitamente risiede nella cartella **e:/3di.it/extraway/**.
+
+L'Extraway server richiede alcune librerie di sistema per funzionare. Per installarle è sufficiente lanciare l'eseguibile xw3dp-setup.exe e seguire le instruzioni.
+
+* Eseguire **e:\3di.it\extraway\xw\bin\xw.exe**
+
+Per poter installare il servizio extraway è necessario eseguire il setup dal percorso **e:\3di.it\extraway\xw\bin**:
+
+* Eseguire **e:\3di.it\extraway\xw\bin\HISETUP.exe**
+* Premere il tasto **"Installa / Avvia"** e chiudere il setup
+
+
+###### Installazione Versione maggiore di 25.8.0
+
+Scaricato il pacchetto eXtraway della versione desiderata, copiare il contenuto della cartella 3di.it nel disco locale della macchina e lanciare l'installazione delle librerie microsoft (2008 e 2010 x86 e x64) presenti nella cartella **'vcredist'**.
+
+    WRAP center round info 800%>  
+    NB: Effettuare le installazione sempre come Amministratore!  
+    </WRAP>
+
+Successivamente installare le librerie presenti nella cartella **'xw3dparts'** necessarie al server eXtraway lanciando l'eseguibile **'xw3rdp-setup-2012.exe'**
+
+Dopo aver registrato l'applicazione procedere con l'installazione del servizio:
+
+Aprire un prompt dei comandi (cmd.exe) e digitare il percorso della cartella contenente l'eseguibile xw.exe (es. 'e:\3di.it\extraway\xw\bin\xw.exe') , 
+
+Lanciare il comando per l'installazione del servizio: 'xw.exe -service_install'
+
+
+###### Servizi di Conversione dei file (FCA, FCS, LibreOffice)
+
+=== Installazione di LibreOffice ===
+Il [[ftp://ftp.3di.it/extra/libreoffice/LibO_3.3.1_Win_x86_install_multi.exe | pacchetto LibreOffice 3.3.1]] è disponibile per l'installazione dal [[ftp://ftp.3di.it/ | sito ftp 3DI]].
+  * <color darkblue>Eseguire il setup di LibreOffice</color>
+  * <color darkblue>Scegliere l'installazione personalizzata e inserire come percorso e:\LibreO~1.org</color>
+<color #505050>//ATTENZIONE: per il funzonamento di fcs è necessario che LibreOffice sia installato in un percorso corto((Questo problema è causato dalle limitazioni della shell di windows))//</color>
+\\
+Non sono necessarie altre modifiche alle impostazioni del setup di LibreOffice.
+\\
+\\
+<WRAP center round info 90%>
+Su Windows 10 è stato necessario aggiungere il file install_custom.cmd richiamato dall'install.bat settando le variabili JAVA_HOME e JVMDLL
+</WRAP>
+
+
+=== File Conversion Agent (FCA) ===
+<WRAP center round info 70%>
+Per installare come servizi l'fca e fcs lanciare l'install.bat da console di amministrazione.
+</WRAP>
+
+Il modulo FCA risiede nella cartella <color #004000>e:\3di.it\platform\fca</color>, come nel caso dell'MSA, nel percorso <color #004000>e:\3di.it\platform\fca\bin</color> è presente il file <color #004000>install.bat</color>:
+  @echo off
+  
+  set _W=e:\3di.it\platform\fca
+  set xwbin=e:\3di.it\extraway\xw\bin
+  
+  @rem set JAVA_HOME =
+  @rem impostarla come variabile di sistema, altrimenti scrivere il percorso esplicito nella variabile sottostante
+  set _J=C:\Programmi\Java\jre6\bin\client\jvm.dll
+  call fca.bat
+
+  * <color darkblue>Inserire per la variabile "_J" il valore "C:\Programmi\Java\jre6\bin\client\jvm.dll"</color>
+  * <color darkblue>Inserire per la variabile "_W" il valore "e:\3di.it\platform\fca"</color>
+  * <color darkblue>Inserire per la variabile "xwbin" il valore "e:\3di.it\extraway\xw\bin"</color>
+  * <color darkblue>Eseguire lo script per installare il modulo</color>
+=== File Conversion Service (FCS) ===
+Il modulo FCS risiede nella cartella <color #004000>e:\3di.it\platform\fcs</color>, come nei casi precedenti, nel percorso <color #004000>e:\3di.it\platform\fcs\bin</color> è presente il solito file <color #004000>install.bat</color> (si riporta solo la dichiarazione delle variabili da configurare della versione distribuita a partire dalla release //3.6.1.0// di FCS):
+  ...
+  
+  set _W=E:\3di.it\platform\fcs
+  set _O=E:\LibreO~1.org
+  
+  rem set JAVA_HOME =
+  rem impostarla come variabile di sistema, altrimenti scrivere il percorso esplicito nella variabile sottostante
+  set _J=%JAVA_HOME%\jre\bin\server\jvm.dll
+  
+  rem CLASSPATH per OO 2
+  rem set _L=..........
+  
+  rem CLASSPATH per OO 3
+  rem set _L=..........
+  
+  ...
+
+  * <color darkblue>Inserire per la variabile "_J" il valore "C:\Programmi\Java\jre6\bin\client\jvm.dll"</color>
+  * <color darkblue>Inserire per la variabile "_W" il valore "E:\3di.it\platform\fcs"</color>
+  * <color darkblue>Inserire per la variabile "_O" il valore "E:\LibreO~1.org" (come da installazione LibreOffice)</color>
+  * <color darkblue>Eseguire lo script per installare il modulo</color>
+\\
+Per poter utilizzare l'FCS inoltre è necessario installare alcune librerie nel sistema:
+  * <color darkblue>Copiare il contenuto della cartella e:\3di.it\platform\fcs\bin\system32 dal CD nella cartella di sistema di windows c:\windows\system32</color>
+
+=== Imagemagick e Tesseract ===
+Per poter utilizzare alcune delle funzionalità di conversione degli allegati sono necessari questi componenti che si trovano all'interno della cartella <color #004000>fcs_utils</color> del cd. Si consiglia di installare queste utility in <color #004000>e:\programmi</color>. Tesseract dalle ultime versioni è integrato all'interno della cartella platform mentre per imagemagick esiste un setup.exe. Nel caso si vogliano modificare i percorsi di installazione sarà necessario modificare di conseguenza il file <color #004000>e:\3di.it\platform\fcs\classes\it.extrawaytech.fcs.properties</color>.
+
+* <color darkblue>Installare Imagemagick in e:\programmi</color>
+
+
+==== Webservices ====
+Solitamente i webservice si trovano nel percorso <color #004000>E:\3di.it\webservices\</color>.
+\\
+Per installarli è necessario inserire nella cartella di configurazione di Tomcat i due file <color #004000>xJwsClient.xml</color> e <color #004000>3diws.xml</color>. Come il file xway.xml per docway, contengono nell'intestazione il percorso da modificare.
+
+  * <color darkblue>Copiare il file xJwsClient.xml dalla cartella E:\3di.it\webservices\</color>
+  * <color darkblue>Modificare il file xJwsClient.xml e inserire il percorso E:\3di.it\webservices\xJwsClient</color>
+  * <color darkblue>Copiare il file 3diws.xml dalla cartella E:\3di.it\webservices\</color>
+  * <color darkblue>Modificare il file 3diws.xml e inserire il percorso E:\3di.it\webservices\3diws</color>
+
+===== Registrazione del servizio eXtraWay =====
+Per poter utilizzare il modulo xw è necessario effettuare la registrazione:
+  * <color darkblue>Eseguire e:\3di.it\extraway\xw\bin\xw.exe</color>
+Nel System tray apparirà un icona con il logo di eXtraWay:
+\\
+{{:documentazione_3di:extraway_os:taskbar.jpg|Icona nella Tray Bar}}
+\\
+\\
+Con il tasto sinistro del mouse sopra l'icona si aprirà la seguente schermata:
+\\
+{{:documentazione_3di:extraway_os:xw_reg_main.jpg}}
+\\
+  * <color darkblue>Premere il pulsante "Registration"((Il pulsante nelle versioni precedenti era "Aggiorna licenza"))</color>
+Si aprirà un altra finestra col nome "eXtraWay Server Installation" che richiede "Insert the number of workstations to activate". Il numero di postazioni indica il numero di istanze massime che possono essere attive in contemporanea sul server((Per convenzione di solito questo numero è il numero massimo degli utenti contemporanei  che utilizzeranno il server diviso 15 e può dipendere anche dalle prestazioni della macchina)).
+  * <color darkblue>Inserire il numero di postazioni massime</color>
+  * <color darkblue>Inserire il numero di serie (se presente)</color>
+  * <color darkblue>Inserire il nome del responsabile e l'organizzazione</color>
+Una volta completata la registrazione compare una finestra "registrazione completata" al di sotto della prima finestra, premere ok per chiudere la procedura.
+
+#### Istruzioni installazione DocWay
