@@ -182,7 +182,7 @@ eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze
 |[**Istruzioni installazione DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-installazione-docway)| 
 
 ### 1. VM gestita da vagrant
-
+___
 Installazione VirtualBox       https://www.virtualbox.org/
 
 Installazione Vagrant          https://www.vagrantup.com/
@@ -201,16 +201,16 @@ Dopo aver testato il funzionamento fare pulizia con il comando: vagrant destroy 
 
 
 ### 2. Installazione singoli pacchetti
-
+___
 #### Istruzioni installazione eXtraWay come platform
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
-#### - Installazione su piattaforma Windows di Extraway Platform
-
+#### - Installazione su piattaforma Windows di eXtraWay Platform
+___
 ##### Requisiti Hardware
 
-Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo. In linea di massima le prestazioni di Extraway dipendono dalla velocità dei dispositivi di memorizzazione, dalla velocità della rete e, per la gestione di allegati non testuali, dalla memoria RAM.
+Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo. In linea di massima le prestazioni di eXtraWay dipendono dalla velocità dei dispositivi di memorizzazione, dalla velocità della rete e, per la gestione di allegati non testuali, dalla memoria RAM.
 
 ###### Requisiti Minimi
 
@@ -481,7 +481,7 @@ Cliccando con il tasto sinistro del mouse sopra l'icona si aprirà una schermata
 Una volta completata la registrazione compare una finestra "registrazione completata" al di sotto della prima finestra, premere ok per chiudere la procedura.
 
 #### - Installazione su piattaforma Linux di ExtraWay Platform
-
+___
 ##### Requisiti Hardware
 
 Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo.
@@ -857,7 +857,7 @@ Allo stato attuale risultano
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
 #### - Installazione su piattaforma Windows di DocWay 4
-
+___
 ##### Requisiti Hardware
 
 Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo. In linea di massima le prestazioni di DocWay 4 dipendono dalla velocità dei dispositivi di memorizzazione, dalla velocità della rete e, per la gestione di allegati non testuali, dalla memoria RAM.
