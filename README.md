@@ -21,7 +21,7 @@ Per ciascun modulo descritto di seguito, vengono indicate le funzionalità princ
 ||
 |[**Istruzioni per le dipendenze eXtraWay e DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)| 
 ||
-
+___
 ## [FCA](https://github.com/3dinformatica/docway-fca)/[FCS](https://github.com/3dinformatica/docway-fcs) 
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
@@ -68,8 +68,7 @@ Requisiti per l'esecuzione di conversioni e estrazione di testo da parte di FCS:
 - OpenOffice
 - ImageMagick
 - Tesseract
-
-
+___
 ## [Console Audit](https://github.com/3dinformatica/auditConsole)
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
@@ -137,7 +136,7 @@ Di seguito è descritto il formato del record di AUDIT registrato su archivio Mo
 | tipoAzione | Tipologia di azione svolta (tipicamente dipendente dall'applicazione sottoposta a AUDIT) |
 | data | Data e Ora di svolgimento dell'azione da parte dell'utente |
 | changes | Elenco di modifiche apportate al record (per ogni campo viene indicato il valore precedente alla modifica e quello successivo) |
-
+___
 ## [MSA](https://github.com/3dinformatica/docway-msa)
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
@@ -162,7 +161,7 @@ Di seguito le funzionalità offerte:
 ### Prerequisiti:
 1. _Java8_
 2. MongoDB (vers. 3.6.3)
-
+___
 ## Istruzioni per le dipendenze eXtraWay e DocWay
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
@@ -207,9 +206,11 @@ ___
 #### Istruzioni installazione eXtraWay come platform
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
-
-#### - Installazione su piattaforma Windows di eXtraWay Platform
 ___
+#### - Installazione su piattaforma Windows di eXtraWay Platform
+
+###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
+
 ##### Requisiti Hardware
 
 Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo. In linea di massima le prestazioni di eXtraWay dipendono dalla velocità dei dispositivi di memorizzazione, dalla velocità della rete e, per la gestione di allegati non testuali, dalla memoria RAM.
@@ -481,9 +482,11 @@ Cliccando con il tasto sinistro del mouse sopra l'icona si aprirà una schermata
 * Inserire il nome del responsabile e l'organizzazione
 
 Una volta completata la registrazione compare una finestra "registrazione completata" al di sotto della prima finestra, premere ok per chiudere la procedura.
-
-#### - Installazione su piattaforma Linux di ExtraWay Platform
 ___
+#### - Installazione su piattaforma Linux di ExtraWay Platform
+
+###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
+
 ##### Requisiti Hardware
 
 Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo.
@@ -772,8 +775,10 @@ Es. script backup da inserire nel crontab di root:
     /etc/init.d/extraway.fca start  
     /etc/init.d/extraway-fcs start  
     /etc/init.d/tomcat6 start
-
+___
 #### Uso di Antivirus nelle installazioni eXtraWay
+
+###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
 La presenza di un antivirus nelle installazioni della piattaforma eXtraWay può comportare due distinti ordini di problemi: di natura prestazionale e di natura funzionale.
 
@@ -853,14 +858,14 @@ Allo stato attuale risultano
 -------
 
 >**N.B.:** Gli elenchi riportati sono da considerarsi __meramente indicativi e non esaustivi__. 3D Informatica __non può considerarsi responsabile__ qualora nuove versioni di antivirus verificati risultassero incompatibili ne può garantire che nuove versioni degli antivirus noti come incompatibili risultino di fatto utilizzabili. Chi fosse intenzionato ad acquisire un software antivirus per proteggere le proprie installazioni eXtraWay dovrà, __sotto la propria responsabilità__, raccogliere informazioni sufficienti per garantirsi la possibilità di sottoporre a tale software liste di esclusioni quanto meno per gli aspetti funzionali.
-
+___
 #### Istruzioni installazione DocWay
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 ___
 #### - Installazione su piattaforma Windows di DocWay 4
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
-___
+
 ##### Requisiti Hardware
 
 Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo. In linea di massima le prestazioni di DocWay 4 dipendono dalla velocità dei dispositivi di memorizzazione, dalla velocità della rete e, per la gestione di allegati non testuali, dalla memoria RAM.
@@ -1185,10 +1190,10 @@ L'ordine per effettuare l'avvio dei servizi tramite l'utility **services.msc** �
 * eXtraWay FCA
 * eXtraWay Mail Archiver
 * Tomcat
-
+___
 #### - Installazione su piattaforma Linux di DocWay 4
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
-___
+
 ##### Prerequisiti software
 
 **Server**
