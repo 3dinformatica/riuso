@@ -184,12 +184,9 @@ eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze
 
 ### 1. VM gestita da vagrant
 ___
-Installazione VirtualBox       https://www.virtualbox.org/
+Per avere a disposizione una VM in cui far girare il sistema documentale DocWay, comprensivo dei moduli su descritti, e testarlo occorre scaricare la cartella **DebDocWay** 
 
-Installazione Vagrant          https://www.vagrantup.com/
-
-
-1) Dopo aver installato le due applicazioni installare il plugin che permette a Vagrant di comunicare con virtualbox
+1) Dopo aver installato [VirtualBox](https://www.virtualbox.org/) e [Vagrant](https://www.vagrantup.com/), installare il plugin che permette a Vagrant di comunicare con VirtualBox
 
 
     - Da una shell lanciare: vagrant plugin install vagrant-vbguest
@@ -197,6 +194,12 @@ Installazione Vagrant          https://www.vagrantup.com/
 
 2) Posizionarsi dentro la cartella appena scaricata e lanciare il comando: vagrant up
 
+3) Inserire le seguenti credenziali per accedere a DocWay:
+
+    username: admin
+    password: admin
+
+4) Per il funzionamento dell'applicativo fare riferimento al [**Manuale Online**](https://wiki.3di.it/doku.php?id=documentazione_3di%3Adocway4%3Amanuali_utente%3Amanuale_utente_docway4) presente anche nella sezione **Aiuto** della HomePage di DocWay.
 
 Dopo aver testato il funzionamento fare pulizia con il comando: vagrant destroy --force
 
@@ -323,7 +326,7 @@ ___
 
 Di base l'applicativo viene installato nel disco dedicato che per comodità indicheremo come e:
 
-* Copiare la cartella 3di.it dal cd in e:\
+* Copiare la cartella 3di.it dal pacchetto in e:\
 
 Per fare in modo che tomcat visualizzi l'applicazione è necessario copiare il file di configurazione **xway.xml** all'interno della cartella di configurazione di tomcat:
 
@@ -444,7 +447,7 @@ Il modulo FCS risiede nella cartella **e:\3di.it\platform\fcs**, come nei casi p
 
 Per poter utilizzare l'FCS inoltre è necessario installare alcune librerie nel sistema:
 
-* Copiare il contenuto della cartella e:\3di.it\platform\fcs\bin\system32 dal CD nella cartella di sistema di windows c:\windows\system32
+* Copiare il contenuto della cartella e:\3di.it\platform\fcs\bin\system32 dal pacchetto nella cartella di sistema di windows c:\windows\system32
 
 ###### Imagemagick e Tesseract
 
@@ -1013,7 +1016,7 @@ Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il per
 
 Di base l'applicativo viene installato nel disco dedicato che per comodità indicheremo come e:
 
-* Copiare la cartella 3di.it dal cd in e:\
+* Copiare la cartella 3di.it dal pacchetto in e:\
 
 Per fare in modo che tomcat visualizzi l'applicazione è necessario copiare il file di configurazione **xway.xml** all'interno della cartella di configurazione di tomcat:
 
@@ -1075,7 +1078,7 @@ __Per poter usufruire di questo servizio, è necessario inserirlo nelle operazio
 
 **Microsoft Visual C++ 2008 Redistributable**
 
-Prima dell'installazione del servizio extraxay sarà necessario installare dal CD Microsoft Visual C++ 2008 Redistributable, eseguendo vcredist_x86.exe dalla cartella msvc9
+Prima dell'installazione del servizio extraxay sarà necessario installare dal pacchetto Microsoft Visual C++ 2008 Redistributable, eseguendo vcredist_x86.exe dalla cartella msvc9
 
 **Extraway**
 
@@ -1150,7 +1153,7 @@ Il modulo FCS risiede nella cartella **e:\3di.it\platform\fcs**, come nei casi p
 
 Per poter utilizzare l'FCS inoltre è necessario installare alcune librerie nel sistema:
 
-* Copiare il contenuto della cartella e:\3di.it\platform\fcs\bin\system32 dal CD nella cartella di sistema di windows c:\windows\system32
+* Copiare il contenuto della cartella e:\3di.it\platform\fcs\bin\system32 dal pacchetto nella cartella di sistema di windows c:\windows\system32
 
 **Imagemagick e Tesseract**
 
@@ -1226,7 +1229,7 @@ Le librerie di sistema necessarie al corretto funzionamento dei componenti che c
 * libxslt.so.1
 * libzip.so.1
 
->ATTENZIONE: Gli eseguibili del motore eXtraWay non hanno ancora una versione dispobibile a 64bit. E' necessario pertanto installare le librerie di compatibilita ia32 sulle macchine a 64 bit della maggior parte delle distribuzioni. Inoltre esistono alcuni casi riportati ((Al momento RHEL 5.6)) sul quale è necessario installare manualmente le librerie elencate in versione 32bit. Se non è possibile effettuare questi passaggi o le librerie indicate non sono presenti, la specifica distribuzione non è supportata da Docway 3.10.2.
+>ATTENZIONE: Gli eseguibili del motore eXtraWay non hanno ancora una versione dispobibile a 64bit. È necessario pertanto installare le librerie di compatibilita ia32 sulle macchine a 64 bit della maggior parte delle distribuzioni. Inoltre esistono alcuni casi riportati ((Al momento RHEL 5.6)) sul quale è necessario installare manualmente le librerie elencate in versione 32bit. Se non è possibile effettuare questi passaggi o le librerie indicate non sono presenti, la specifica distribuzione non è supportata da Docway 3.10.2.
 
 **Per installare le librerie su sistemi Ubuntu usare il seguente comando:**
 
