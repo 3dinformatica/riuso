@@ -8,25 +8,25 @@ Il **progetto di riuso** si articola dunque attraverso la liberazione del sorgen
 
 Allo stesso tempo i moduli dei quali viene liberato il codice sorgente, possono essere utilizzati sia in combinazione con l'applicazione documentale scaricata e rilasciata in questo repository come dipendenza al fine di estenderne le funzionalità e le capacità, sia come progetti software a se stanti, ciascuno dei quali in grado di operare ad uno strato più "generico" con specifiche finalità.
 
-La licenza di distribuzione open source scelta dall'Amministrazione è la **Affero General Public License (AGPL) v3.** 
+La licenza di distribuzione open source scelta dall'Amministrazione è la **Affero General Public License (AGPL) v3.**
 
 Per ciascun modulo descritto di seguito, vengono indicate le funzionalità principali e l'architettura del modulo stesso, il flusso di esecuzione, le dipendenze, le modalità di installazione e di utilizzo così come suggerimenti per gli sviluppatori che dovessero usare il codice liberato per implementarlo in proprie applicazioni.
 
-|Repository Moduli| 
+|Repository Moduli|
 |--|
-|[Modulo FCA](https://github.com/3dinformatica/docway-fca)| 
-|[Modulo FCS](https://github.com/3dinformatica/docway-fcs)| 
-|[Modulo Console AUDIT](https://github.com/3dinformatica/auditConsole)| 
-|[Modulo MSA](https://github.com/3dinformatica/docway-msa)| 
+|[Modulo FCA](https://github.com/3dinformatica/docway-fca)|
+|[Modulo FCS](https://github.com/3dinformatica/docway-fcs)|
+|[Modulo Console AUDIT](https://github.com/3dinformatica/auditConsole)|
+|[Modulo MSA](https://github.com/3dinformatica/docway-msa)|
 ||
-|[**Istruzioni per le dipendenze eXtraWay e DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)| 
+|[**Istruzioni per le dipendenze eXtraWay e DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)|
 ||
 ___
-## [FCA](https://github.com/3dinformatica/docway-fca)/[FCS](https://github.com/3dinformatica/docway-fcs) 
+## [FCA](https://github.com/3dinformatica/docway-fca)/[FCS](https://github.com/3dinformatica/docway-fcs)
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
 
-FCA (File Conversion Agent) e FCS (File Conversion Service) consistono in due processi che permettono l'**estrazione del testo da files** e la **conversione di files in un differente formato** (es. da DOC a PDF). 
+FCA (File Conversion Agent) e FCS (File Conversion Service) consistono in due processi che permettono l'**estrazione del testo da files** e la **conversione di files in un differente formato** (es. da DOC a PDF).
 
 Lo scenario di utilizzo può variare a seconda del carico di lavoro:
 - In ambienti di ridotte dimensioni (carico di lavoro non elevato) entrambi i processi possono essere installati (e configurati) sullo stesso server;
@@ -116,7 +116,7 @@ Di seguito è descritto il formato del record di AUDIT registrato su archivio Mo
     },
     "tipoAzione" : "MODIFICA_RECORD",
     "data" : ISODate("2018-06-07T07:40:55.728Z"),
-    "changes" : [ 
+    "changes" : [
         {
             "field" : "doc.extra.raccIndice.@stato",
             "before" : "lavorazione",
@@ -147,7 +147,7 @@ MSA (Mail Storage Agent) è un servizio Java multi-processo che si occupa delle 
 * Completa gestione del processo di interfacciamento con lo SdI per le fatture elettroniche.
 MSA lavora esaminando periodicamente delle caselle di posta (certificate o meno) e dispone di una sua specifica console di amministrazione e controllo.
 
-Sebbene il presente modulo sia rilasciato nella modalità open source, è possibile estendere questo servizio unicamente nello scenario DocWay e eXtraWay. 
+Sebbene il presente modulo sia rilasciato nella modalità open source, è possibile estendere questo servizio unicamente nello scenario DocWay e eXtraWay.
 
 Di seguito le funzionalità offerte:
 - Architettura software, modulare, espandibile e facilmente personalizzabile tramite l'implementazione di apposite interfacce per:
@@ -172,19 +172,19 @@ eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze
 
 * installazione dei singoli pacchetti di eXtraWay e DocWay.
 
-|Istruzioni per le dipendenze eXtraWay e DocWay| 
-|--| 
-|[**Istruzioni installazione eXtraWay come platform**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-installazione-extraway-come-platform)| 
+|Istruzioni per le dipendenze eXtraWay e DocWay|
+|--|
+|[**Istruzioni installazione eXtraWay come platform**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-installazione-extraway-come-platform)|
 |[- Installazione su piattaforma Windows di Extraway Platform](https://github.com/3dinformatica/riuso/blob/master/README.md#--installazione-su-piattaforma-windows-di-extraway-platform)|
 |[ -- Uso di Antivirus nelle installazioni eXtraWay](https://github.com/3dinformatica/riuso/blob/master/README.md#uso-di-antivirus-nelle-installazioni-extraway)
-|[- Installazione su piattaforma Linux di ExtraWay Platform](https://github.com/3dinformatica/riuso/blob/master/README.md#--installazione-su-piattaforma-linux-di-extraway-platform)| 
-|[**Istruzioni installazione DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-installazione-docway)| 
+|[- Installazione su piattaforma Linux di ExtraWay Platform](https://github.com/3dinformatica/riuso/blob/master/README.md#--installazione-su-piattaforma-linux-di-extraway-platform)|
+|[**Istruzioni installazione DocWay**](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-installazione-docway)|
 |[- Installazione su piattaforma Windows di DocWay4](https://github.com/3dinformatica/riuso/blob/master/README.md#--installazione-su-piattaforma-windows-di-docway-4)|
 |[- Installazione su piattaforma Linux di DocWay4](https://github.com/3dinformatica/riuso/blob/master/README.md#--installazione-su-piattaforma-linux-di-docway-4)|
 
 ### 1. VM gestita da vagrant
 ___
-Per avere a disposizione una VM in cui far girare il sistema documentale DocWay, comprensivo dei moduli su descritti, e testarlo occorre scaricare la cartella **DebDocWay** 
+Per avere a disposizione una VM in cui far girare il sistema documentale DocWay, comprensivo dei moduli su descritti, e testarlo occorre scaricare la cartella **DebDocWay**
 
 1) Dopo aver installato [VirtualBox](https://www.virtualbox.org/) e [Vagrant](https://www.vagrantup.com/), installare il plugin che permette a Vagrant di comunicare con VirtualBox
 
@@ -192,12 +192,12 @@ Per avere a disposizione una VM in cui far girare il sistema documentale DocWay,
     - Da una shell lanciare: vagrant plugin install vagrant-vbguest
 
 
-2) Posizionarsi dentro la cartella appena scaricata e lanciare il comando: vagrant up
+2) Dopo acer scaricato il pacchetto [platform](ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz) per linux e averlo posizionato all'interno della cartella da dentro la stessa lanciare il comando: vagrant up
 
-3) Inserire le seguenti credenziali per accedere a DocWay:
+3) Aprire un browser e visitare la pagina http://localhost:18080/DocWay4/ ed inserire le seguenti credenziali per accedere a DocWay:
 
     username: admin
-    password: admin
+    password: DocWay4
 
 4) Per il funzionamento dell'applicativo fare riferimento al [**Manuale Online**](https://wiki.3di.it/doku.php?id=documentazione_3di%3Adocway4%3Amanuali_utente%3Amanuale_utente_docway4) presente anche nella sezione **Aiuto** della HomePage di DocWay.
 
@@ -250,31 +250,29 @@ Per un utilizzo medio: circa 30 utenti collegati contemporaneamente, un milione 
 ###### Installazione
 
 **Pacchetto eXtraWay Platform**
+Scaricare il pacchetto [eXtraWay Platform per Windows](ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-windows.zip)
 
 Il pacchetto ExtraWay Platform è suddiviso in cartelle, di seguito la funzione di ogni componente:
 
-* **jre:** Contiene il Java Runtime Environment (jre-1_6_0_20).
-* **LibreOffice:** contiene l'eseguibile per l'installazione di LibreOffice, utilizzato per la conversione degli allegati.
+* **jdk:** Contiene il Java Runtime Environment (jdk-1_8.x).
 * **tomcat:** contiene l'applicativo Apache Tomcat che ospita l'applicazione java.
-* **3di.it\console\xway:** contiene la console java e il suo file di contesto xway.xml da utilizzare con tomcat.
 * **3di.it\platform:** contiene i due servizi che compongono il sistema di conversione/indicizzazione dei file, FCA e FCS.
 * **3di.it\webservices:** al suo interno sono presenti, il client e il servizio SOAP, che pubblicano I metodi di accesso diretto a Extraway, e danno la possibilità di interfacciare applicativi esterni sulla base documentale.
 * **3di.it\extraway\xw:** cartella contenente il server per il database eXtraWay.
 * **3di.it\extraway\xw\db:** Contiene un archivio di esempio con alcuni record di esempio, utilizzabile con i webservices.
 * **xw3rdparts:** contiene librerie di terze parti per la manipolazione degli xml e la compressione di files con le rispettive licenze d'uso.
-* **fcs_utils:** contiene contiene le utility di terze parti per la conversione degli allegati.
 ___
 **Java**
 
 Eseguire il setup di java dalla cartella Jre del pacchetto.
 
-Non è necessario cambiare alcuna configurazione durante l'esecuzione del setup. Di base il Java Runtime Environment ha come destinazione **C:\Programmi\Java\jre6\**.
+Non è necessario cambiare alcuna configurazione durante l'esecuzione del setup. Di base il Java Runtime Environment ha come destinazione **C:\Programmi\Java\jdk8\**.
 ___
 **Tomcat**
 
-Eseguire il setup di tomcat dalla cartella del pacchetto. Anche qui non è necessario modificare alcuna impostazione durante l'esecuzione del setup and eccezione della cartella di destinazione: **e:\Programmi\Apache Software Foundation\Tomcat 6.0**
+Eseguire il setup di tomcat dalla cartella del pacchetto. Anche qui non è necessario modificare alcuna impostazione durante l'esecuzione del setup and eccezione della cartella di destinazione: **e:\Programmi\Apache Software Foundation\Tomcat 8.0**
 
-* Cambiare la directory di installazione di Tomcat in **e:\Programmi\Apache Software Foundation\Tomcat 6.0**
+* Cambiare la directory di installazione di Tomcat in **e:\Programmi\Apache Software Foundation\Tomcat 8.0**
 
 Una volta terminata l'installazione apparirà un icona con il logo di Apache Tomcat nel System Tray.
 
@@ -286,7 +284,7 @@ Nella prima pagina **"General"** l'avvio di Tomcat è impostato su **manuale**:
 
 Nella pagina **"Java"**:
 
-* Indicare il percorso: **C:\Programmi\Java\jre6\bin\client\jvm.dll in "Java Virtual Machine"**.
+* Indicare il percorso: **C:\Programmi\Java\jdk8\bin\client\jvm.dll in "Java Virtual Machine"**.
 * Indicare "1024" in "Maximum Memory Pool". (La quantità di memoria massima che Tomcat può utilizzare non dovrebbe mai essere impostata a meno di 1GB, per evitare che, durante lo scaricamento o l'inserimento di file molto grandi, si esaurisca la memoria disponibile. Tuttavia questo valore può essere aumentato se c'è disponibilità sul sistema.)
 
 Per poter utilizzare l'utente base di Tomcat (solitamente admin) per accedere alla console è necessario inserire il valore "admin" al file **tomcat-users.xml**:
@@ -375,86 +373,10 @@ Successivamente installare le librerie presenti nella cartella **'xw3dparts'** n
 
 Dopo aver registrato l'applicazione procedere con l'installazione del servizio:
 
-Aprire un prompt dei comandi (cmd.exe) e digitare il percorso della cartella contenente l'eseguibile xw.exe (es. 'e:\3di.it\extraway\xw\bin\xw.exe') , 
+Aprire un prompt dei comandi (cmd.exe) e digitare il percorso della cartella contenente l'eseguibile xw.exe (es. 'e:\3di.it\extraway\xw\bin\xw.exe') ,
 
 Lanciare il comando per l'installazione del servizio: 'xw.exe -service_install'
 ___
-**Servizi di Conversione dei file (FCA, FCS, LibreOffice)**
-
-###### Installazione di LibreOffice
-Il [pacchetto LibreOffice 3.3.1](ftp://ftp.3di.it/extra/libreoffice/LibO_3.3.1_Win_x86_install_multi.exe) è disponibile per l'installazione dal [sito ftp 3DI](ftp://ftp.3di.it/).
-
-* Eseguire il setup di LibreOffice
-* Scegliere l'installazione personalizzata e inserire come percorso e:\LibreO~1.org
-
->ATTENZIONE: per il funzonamento di fcs è necessario che LibreOffice sia installato in un percorso corto (Questo problema è causato dalle limitazioni della shell di windows)
-
-Non sono necessarie altre modifiche alle impostazioni del setup di LibreOffice.
-
-    <WRAP center round info 90%>  
-    Su Windows 10 è stato necessario aggiungere il file install_custom.cmd richiamato dall'install.bat settando le variabili JAVA_HOME e JVMDLL  
-    </WRAP>
-
-
-###### File Conversion Agent (FCA)
-
-    <WRAP center round info 70%>
-    Per installare come servizi l'fca e fcs lanciare l'install.bat da console di amministrazione.
-    </WRAP>
-
-Il modulo FCA risiede nella cartella **e:\3di.it\platform\fca**, come nel caso dell'MSA, nel percorso **e:\3di.it\platform\fca\bin** è presente il file **install.bat**:
-
-    @echo off  
-    set _W=e:\3di.it\platform\fca  
-    set xwbin=e:\3di.it\extraway\xw\bin
-    
-    @rem set JAVA_HOME =  
-    @rem impostarla come variabile di sistema, altrimenti scrivere il percorso esplicito nella variabile sottostante  
-    set _J=C:\Programmi\Java\jre6\bin\client\jvm.dll  
-    call fca.bat
-
-* Inserire per la variabile "_J" il valore "C:\Programmi\Java\jre6\bin\client\jvm.dll"
-* Inserire per la variabile "_W" il valore "e:\3di.it\platform\fca"
-* Inserire per la variabile "xwbin" il valore "e:\3di.it\extraway\xw\bin"
-* Eseguire lo script per installare il modulo
-
-###### File Conversion Service (FCS)
-
-Il modulo FCS risiede nella cartella **e:\3di.it\platform\fcs**, come nei casi precedenti, nel percorso **e:\3di.it\platform\fcs\bin** è presente il solito file **install.bat** (si riporta solo la dichiarazione delle variabili da configurare della versione distribuita a partire dalla release //3.6.1.0// di FCS):
-
-    ...
-
-    set _W=E:\3di.it\platform\fcs  
-    set _O=E:\LibreO~1.org  
-    
-    
-    rem set JAVA_HOME =
-    rem impostarla come variabile di sistema, altrimenti scrivere il percorso esplicito nella variabile sottostante  
-    set _J=%JAVA_HOME%\jre\bin\server\jvm.dll  
-    
-    
-    rem CLASSPATH per OO 2  
-    rem set _L=..........  
-
-    rem CLASSPATH per OO 3  
-    rem set _L=..........
-
-    ...
-
-* Inserire per la variabile "_J" il valore "C:\Programmi\Java\jre6\bin\client\jvm.dll"
-* Inserire per la variabile "_W" il valore "E:\3di.it\platform\fcs"
-* Inserire per la variabile "_O" il valore "E:\LibreO~1.org" (come da installazione LibreOffice)
-
-Per poter utilizzare l'FCS inoltre è necessario installare alcune librerie nel sistema:
-
-* Copiare il contenuto della cartella e:\3di.it\platform\fcs\bin\system32 dal pacchetto nella cartella di sistema di windows c:\windows\system32
-
-###### Imagemagick e Tesseract
-
-Per poter utilizzare alcune delle funzionalità di conversione degli allegati sono necessari questi componenti che si trovano all'interno della cartella **fcs_utils** del pacchetto eXtraWay. Si consiglia di installare queste utility in e:\programmi. Tesseract dalle ultime versioni è integrato all'interno della cartella platform mentre per imagemagick esiste un setup.exe. Nel caso si vogliano modificare i percorsi di installazione sarà necessario modificare di conseguenza il file **e:\3di.it\platform\fcs\classes\it.extrawaytech.fcs.properties**.
-
-* Installare Imagemagick in e:\programmi
-
 ###### Webservices
 
 Solitamente i webservice si trovano nel percorso **E:\3di.it\webservices\/**.
@@ -487,6 +409,7 @@ Cliccando con il tasto sinistro del mouse sopra l'icona si aprirà una schermata
 Una volta completata la registrazione compare una finestra "registrazione completata" al di sotto della prima finestra, premere ok per chiudere la procedura.
 ___
 #### - Installazione su piattaforma Linux di ExtraWay Platform
+Scaricare il pacchetto [eXtraWay Platform per Windows](ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz)
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
@@ -497,8 +420,8 @@ In linea di massima le prestazioni di eXtraWay Platform dipendono dalla velocit�
 
 ###### Requisiti Minimi
 
-* Processore Intel Pentium 4 o compatibile
-* 1 GB di RAM
+* Processore Intel Xeon o compatibile
+* 4 GB di RAM
 * Disco rigido dedicato con almeno 100 GB (per un archivio medio con allegati)
 
 ###### Consigliati
@@ -528,10 +451,8 @@ eXtraway Platform è stato testato ed è utilizzato con diverse distribuzioni:
 * [Gentoo](http://www.gentoo.org)
 
 Sono consigliati ad ora dal servizio assistenza 3di:
-* Redhat Enterprise 5 64bit
-* Centos 6.4 64bit
-* Ubuntu Server 12.04 LTS 64bit
-* Gentoo 64bit
+* Centos 7 64bit
+* Dedian 10 64bit
 
 ###### Librerie di sistema richieste
 
@@ -555,14 +476,14 @@ Le librerie di sistema necessarie al corretto funzionamento dei componenti che c
 
     sudo apt-get install libgcc1:i386 libzip2:i386 libc6:i386 libxml2:i386 libxslt1.1:i386 libcurl3:i386 libncurses5:i386 libreadline6:i386 libstdc++6:i386
 
-**Per installare le librerie su sistemi Debian recenti (Debian 9) usare il seguente comando da root:**
+**Per installare le librerie su sistemi Debian recenti (Debian 10) usare il seguente comando da root:**
 
     <code bash>  
     dpkg --add-architecture i386
-    
-    
+
+
     apt-get update
-    
+
     apt-get install libgcc1:i386 libzip4:i386 libc6:i386 libxml2:i386 libxslt1.1:i386 libcurl4:i386 libncurses5:i386 libreadline7:i386 libstdc++6:i386 libxslt1.1:i386 libzip4:i386
     </code>
 
@@ -594,11 +515,11 @@ In alcune distribuzioni non è compresa nell'installazione di base: tuttavia il 
 
 **Componenti che verranno installati**
 
-* Apache Tomcat 6.0.20
-* Sun Java Runtime Environment 1.6.0_20
-* LibreOffice 3.3.1
+* Apache Tomcat 7.x
+* Sun Java Runtime Environment 1.8.x
+* LibreOffice 5.x
 * ExtraWay Platform
- 
+
 **Preparazione della macchina server**
 
 È consigliato mantenere l'installazione dell'applicativo in un dispositivo di memorizzazione separato rispetto a quello che ospita il sistema operativo.
@@ -635,7 +556,7 @@ Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il per
     pathname="conf/tomcat-users.xml" readonly="false" />  
     </GlobalNamingResources>
 
-* Inserire il parametro "readonly=false" all'interno dell'attributo "Realm" (UserDatabase)" nel file /opt/apache-tomcat-6.0.26/conf/server.xml
+* Inserire il parametro "readonly=false" all'interno dell'attributo "Realm" (UserDatabase)" nel file /opt/apache-tomcat-7.X/conf/server.xml
 
 **Impostazione parametri del kernel per eXtraWay in /etc/sysctl.conf**
 
@@ -671,17 +592,6 @@ Es.
 
 In alternativa è possibile assegnare ad extraway le singole cartelle in opt, tuttavia ciò potrebbe richiedere accesso amministrativo per effettuare aggiornamenti futuri.
 
-##### LibreOffice
-
-Nel caso si sia scelta la procedura di installazione manuale estrarre il pacchetto LibreOffice.
-
-Es.
-    /opt# tar xzf LibO_3.3.1_Linux_x86_install-rpm_en-US.tar.gz
-
-Eseguire il comando di installazione di LibreOffice (install.sh) dalla cartella estratta e seguire le indicazioni. Solitamente non è necessario cambiare nessun parametro dall'installazione di default.
-
-Nel caso invece si pensi di utilizzare la versione della propria distribuzione è necessario controllare che i percorsi della cartella base di libreoffice e dei componenti basis e URE siano corretti nel file /opt/it-3di/platform/fcs/conf/extraway-fcs.conf
-
 ##### Accorgimenti per sistemi con versione di glibc antecedente alla 2.7
 
 In alcuni sistemi è necessario installare la versione compatibile degli eseguibili eXtraWay. Questa versione è compilata con glibc 2.5.
@@ -690,94 +600,14 @@ Per installarli copiare i file contenuti in /opt/it-3di/extraway/xw/platform-dep
 
 ##### Registrazione del motore del database (eXtraWay)
 
-Per poter utilizzare eXtraWay è necessario effettuare la registrazione.
-
-Eseguire il seguente comando dalla cartella /opt:
-
-    /opt~$ ./demo.sh registration
-  
-Nel caso si riceva il messaggio:
-
->No TCP/IP interface found,  
-Server can't be set up  
-End of Procedure.
-
-è necessario aggiungere una entry al file /etc/hosts nella quale si associa l'indirizzo dell'interfaccia di rete sulla quale ascolterà il server xw con il suo hostname, ricavabile da /etc/hostname.
-
-Durante la registrazione vengono chiesti i seguenti dati:
-
-* Numero di postazioni da abilitare
-* Numero di serie (se fornito)
-* Nome del responsabile
-* Nome dell'organizzazione
-
-Il primo numero è il numero massimo di istanze di xw che possono partire in contemporanea sul server (Per convenzione si solito questo numero è il numero massimo di utenti che utilizzeranno il server in contemporanea diviso 15 e dipende anche dalle prestazioni della macchina)
+Per poter utilizzare appieno eXtraWay è necessario effettuare la registrazione.
 
 **Automatismi**
 
 Per ultima cosa bisogna procedere a configurare il sistema operativo per interagire con i componenti in modo automatico.
-
-##### Script di avvio
-
-Gli script per caricare automaticamente l'applicativo all'avvio della macchina (e per riavviare l'applicativo in caso di necessità) si trovano sotto il percorso **/opt/it-3di/extra/init-files** e sono i seguenti:
-
-* tomcat6
-* extraway (motore database)
-* extraway-fca (File Conversion Agent)
-* extraway-fcs (File Conversion Service)
-
-Tutti accettano i comandi start, stop e restart.
+All'interno della platform sono disponibili le routine systemd
 
 >NOTA: gli script all'interno di questa sezione sono tutti configurabili nel caso ci sia necessità di cambiare i percorsi di installazione.
-___
-**Installazione automatica con script 3di**
-
-Sono disponibili già per alcune distribuzioni degli script per inserirli automaticamente all'interno del sistema rc.d:
-
-* [Debian, Ubuntu](ftp://ftp.3di.it/extra/init-scripts/init.d_setup_debian.sh) (utilizza update-rc.d)
-* [Redhat, Fedora e Centos](ftp://ftp.3di.it/extra/init-scripts/chkconfig_initd.tar.bz2) (da copiare in /etc/init.d e attivare con chkconfig)
-* [Gentoo](ftp://ftp.3di.it/extra/init-scripts/gentoo_initd.tar.bz2) (da copiare in /etc/init.d e attivare con rc-update)
-* [script generico](ftp://ftp.3di.it/extra/init-scripts/init.d_setup_generic.sh) (crea direttamente i link in rc.d)
-
->ATTENZIONE: l'esecuzione di alcuni di questi script richiede diritti amministrativi
-___
-**Installazione Manuale**
-
-È possibile anche installare questi file manualmente. È necessario creare dei link ai file in /opt/it-3di/extra/init-files/ in /etc/init.d e creare successivamente creare da questi dei link nei diversi runlevel:
-
-Es.
-    ~# ln -s /opt/it-3di/extra/init-files/extraway /etc/init.d/  
-    ~# ln -s /etc/init.d/extraway /etc/rc0.d/K20extraway  
-    ~# ln -s /etc/init.d/extraway /etc/rc1.d/K20extraway  
-    ~# ln -s /etc/init.d/extraway /etc/rc6.d/K20extraway  
-    ~# ln -s /etc/init.d/extraway /etc/rc2.d/S79extraway  
-    ~# ln -s /etc/init.d/extraway /etc/rc3.d/K79extraway  
-    ~# ln -s /etc/init.d/extraway /etc/rc4.d/K79extraway
-
-Si consiglia di spegnere tomcat leggermente prima, di seguito l'ordine di partenza e di spegnimento di tutti i servizi:
-
-  * tomcat6: start 80 | stop 19
-  * extraway: start  79 | stop 20
-  * extraway-fca: start 79 | stop 20
-  * extraway-fcs: start 79 | stop 20
-
-##### Backup
-
-È altamente consigliato mantenere un backup dell'intera cartella it-3di (anche incrementale volendo).
-
-Per fare ciò è necessario fermare i servizi extraway e tomcat6 prima di eseguire lo script di backup vero e proprio.
-
-Es. script backup da inserire nel crontab di root:
-
-    /etc/init.d/tomcat6 stop  
-    /etc/init.d/extraway-fcs stop  
-    /etc/init.d/extraway.fca stop  
-    /etc/init.d/extraway stop  
-    <comando backup>  
-    /etc/init.d/extraway start  
-    /etc/init.d/extraway.fca start  
-    /etc/init.d/extraway-fcs start  
-    /etc/init.d/tomcat6 start
 ___
 #### Uso di Antivirus nelle installazioni eXtraWay
 
@@ -810,21 +640,21 @@ Per non incorrere in limitazioni prestazionali, ed in generale considerando la n
 |\3di.it\extraway\xw\logs  |Cartella logs eXtraWay  |
 |\3di.it\extraway\xw\xreg  |Dove presente, cartella di servizio per il registro di  eXtraWay  |
 |\3di.it\extraway\xw\lazy  |Dove presente, cartella di servizio per le attività *near on line* di  eXtraWay  |
-|\Programmi\Apache Software Foundation\Tomcat 6.0\bin  |Cartella eseguibili Apache Tomcat  |
-|\Programmi\Apache Software Foundation\Tomcat 6.0\work  |Cartella cache Tomcat  |
+|\Programmi\Apache Software Foundation\Tomcat 7.0\bin  |Cartella eseguibili Apache Tomcat  |
+|\Programmi\Apache Software Foundation\Tomcat 7.0\work  |Cartella cache Tomcat  |
 |*%temp*%\hwtemp  |Cartella file temporanei di eXtraWay  |
 
 La cartella *%temp%* solitamente corrisponde a \windows\temp ma dipende direttamente dall'impostazione della variabile di sistema Windows.
 
 ##### Interventi di tipo Funzionale
 Come precedentemente annunciato un comportamento del modulo eXtraWay Server viene considerato malevolo dalla maggioranza degli antivirus.
- 
+
 L'architettura di eXtraWay Server prevede che esista un'istanza del modulo in ascolto per nuove connessioni. Quando un'applicazione client richiede una nuova connessione il server in ascolto, detto *Master*, duplica se stesso producendo una copia figlia, detta *Slave*, che di fatto instaura la connessione con l'applicazione client e ne esegue le richieste.
 
  Il processo così generato eredita dal processo principale alcune risorse condivise.
- 
+
 Un simile comportamento viene considerato pericoloso in quanto rappresenta uno dei più comuni sistemi che hanno i virus per avviare processi in grado di produrre danni e/o appropriarsi di importanti informazioni presenti nel sistema.
- 
+
 Per ovviare a questo bisogna necessariamente istruire il sistema antivirus perché consideri eXtraWay Server come processo affidabile, quindi *trusted*, e non ne impedisca il corretto comportamento.
 
 ###### Lista esclusioni per eseguibili
@@ -919,11 +749,6 @@ Per maggiori dettagli relativi al supporto browser, consultare la [seguente pagi
 
 Per usufruire di alcune funzionalità (firma digitale dei file, per esempio) è necessario installare un [Java Runtime Environment](http://java.com) col relativo plugin per i vari browser.
 
-**Plugin IWX**
-
-Per poter utilizzare appieno le funzionalità dell'applicativo, è possibile installare il plugin IWX, che integra, tra le altre, funzionalità di stampa e scansione diretta di documenti in DocWay 4.
-Per installarlo è necessario scaricare il pacchetto di installazione MSI dall'interfaccia di DocWay 4 ((Il link di scaricamento diventa visibile nella schermata di creazione/modifica di un documento o all'apertura di un documento contenente allegati)) e disporre di diritti amministrativi sulla macchina.
-
 ##### Installazione
 
 **Anatomia del pacchetto di installazione**
@@ -932,20 +757,17 @@ Il pacchetto di installazione contiene i moduli di DocWay4 suddivisi in cartelle
 
 * Contiene il Java Runtime Environment.
 * contiene un modulo microsoft per la trasformazione degli xml con fogli di stile (formato .msi).
-* contiene l'eseguibile per l'installazione di LibreOffice, utilizzato per la conversione degli allegati.
 * contiene le indicazioni su come avviare un flusso documentale di prova.
 * contiene l'applicativo Apache Tomcat che ospita l'applicazione java.
 * contiene i pacchetto Microsoft Visual C++ 2008/2010 Redistributable, che devono essere installati (se non già presenti) per il corretto funzionamento dei componenti.
 * contiene le applicazione java per DocWay4 e i loro file di contesto DocWay4.xml e DocWay4-service.xml da utilizzare con tomcat.
 * contiene i due servizi che compongono il sistema di conversione/indicizzazione dei file, FCA e FCS.
 * contiene le utility di terze parti per la conversione degli allegati.
-* contiene il modulo per l'archiviazione delle mail (MailStorage)
-* contiene il modulo per l'esportazione del registro di protocollo (RIP)
+* contiene il modulo per l'archiviazione delle mail (MSA)
 * cartella dove è possibile installare il modulo aggiuntivo dei webservice
 * cartella contenente il server per il database eXtraWay.
 * Contiene l'archivio utilizzato dall'applicativo.
 * contiene librerie di terze parti per la manipolazione degli xml e la compressione di files con le rispettive licenze d'uso.
-* Contiene i componenti aggiuntivi utilizzati da IIS per comunicare direttamente con tomcat. Al suo interno è presente una directory [bin] dove sono contenute le estensioni per IIS.
 
 ###### Root di installazione
 
@@ -956,10 +778,10 @@ Consigliamo di installare i nostri applicativi in un disco separato rispetto a q
 Eseguire il setup di java dalla cartella jre del cd.
 
 
-Non è necessario cambiare alcuna configurazione durante l'esecuzione del setup. 
-Di base il Java Runtime Environment ha come destinazione 
+Non è necessario cambiare alcuna configurazione durante l'esecuzione del setup.
+Di base il Java Runtime Environment ha come destinazione
 
-    C:\Programmi\Java\jre7  
+    C:\Programmi\Java\jdk8
 
 
 ###### Tomcat
@@ -972,7 +794,7 @@ Eseguire il setup di Tomcat dalla cartella del cd. Durante l'installazione sarà
 * Modificare la directory di destinazione: nonostante questo non sia necessario, consigliamo di installare Tomcat all'interno dalla root di installazione prescelta (i.e. E:), nel percorso E:\programmi\Apache Software Foundation\Tomcat 7.0.
 
 
-Una volta terminata l'installazione si dovranno impostare altre opzioni tramite "Configure Tomcat" dal menù delle Applicazioni: 
+Una volta terminata l'installazione si dovranno impostare altre opzioni tramite "Configure Tomcat" dal menù delle Applicazioni:
 
 * nella prima pagina "General" verificare che l'avvio di Tomcat sia impostato su automatico;
 
@@ -1004,7 +826,7 @@ Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il per
     <!-- Editable user database that can also be used by  
     UserDatabaseRealm to authenticate users  
     -->  
-    
+
     <Resource name="UserDatabase" auth="Container"  
     type="org.apache.catalina.UserDatabase"  
     description="User database that can be updated and saved"  factory="org.apache.catalina.users.MemoryUserDatabaseFactory"  pathname="conf/tomcat-users.xml" readonly="false" />  
@@ -1053,22 +875,6 @@ All'interno della cartella **e:\3di.it\docway_extra\MailStorage\bin\/** si trova
 * Inserire per la variabile "INSTDIR" il valore "e:/3di.it/DocWay4/MailStorage"
 * Eseguire lo script per installare il modulo
 
-**Registro di Protocollo**
-
-Il modulo per esportare il registro di protocollo (RIP) risiede solitamente nel percorso **e:\3di.it\DocWay4\rip**.
-
-Nella cartella **E:\3di.it\docway_extra\rip\bin\/** si trova il file **rip.bat**. Come nel caso dell'MSA è necessario impostare i percorsi in modo corretto:
-
-    @echo off  
-    @rem TODO:  
-    @rem impostare INSTDIR  
-    @rem verificare la variabile d'ambiente JAVA_HOME, se assente inserirlo nel presente file  
-    @rem verificare percorso del file di log in classes/log4j.properties  
-    @rem impostare eventuali parametri nella variabile PARAMETERS  
-    set JAVA_HOME=C:\Programmi\Java\jre6  
-    set INSTDIR=E:/3di.it/DocWay4/rip  
-    set MY_JAVA_HOME=%INSTDIR%/lib
-
 * Impostare alla variabile "JAVA_HOME" il valore "C:\Programmi\Java\jre6"
 * Impostare alla variabile "INSTDIR" il valore "E:/3di.it/DocWay4/rip"
 
@@ -1092,97 +898,6 @@ Per poter installare il servizio extraway è necessario eseguire il setup dal pe
 
 * Eseguire e:\3di.it\extraway\xw\bin\HISETUP.exe
 * Premere il tasto "Installa / Avvia" e chiudere il setup
-
-##### Servizi di Conversione dei file (FCA, FCS, LibreOffice)
-
-**Installazione di LibreOffice**
-
-Il [pacchetto LibreOffice 3.3.1](ftp://ftp.3di.it/extra/libreoffice/LibO_3.3.1_Win_x86_install_multi.exe) è disponibile per l'installazione dal [sito ftp 3DI](ftp://ftp.3di.it/).
-
-* Eseguire il setup di LibreOffice
-* Scegliere l'installazione personalizzata e inserire come percorso e:\LibreO~1.org
-
->ATTENZIONE: per il funzonamento di fcs è necessario che LibreOffice sia installato in un percorso corto (Questo problema è causato dalle limitazioni della shell di windows)
-
-**Inoltre il percorso non deve assolutamente contenere spazi in quanto non possono essere usare le virgolette nel file install.bat per definire il path di libreoffice/openoffice**
-
-Non sono necessarie altre modifiche alle impostazioni del setup di LibreOffice.
-
-**File Conversion Agent (FCA)**
-
-Il modulo FCA risiede nella cartella **e:\3di.it\platform\fca**, come nel caso dell'MSA, nel percorso **e:\3di.it\platform\fca\bin** è presente il file **install.bat**:
-
-    @echo off
-    set _W=e:\3di.it\platform\fca
-    set xwbin=e:\3di.it\extraway\xw\bin
-
-    @rem set JAVA_HOME =
-    @rem impostarla come variabile di sistema, altrimenti scrivere il percorso esplicito nella variabile sottostante
-    set _J=C:\Progra~1\Java\jre6\bin\client\jvm.dll
-    call fca.bat
-
-* Inserire per la variabile "_J" il valore "C:\Progra~1\Java\jre6\bin\client\jvm.dll"
-* Inserire per la variabile "_W" il valore "e:\3di.it\platform\fca"
-* Inserire per la variabile "xwbin" il valore "e:\3di.it\extraway\xw\bin"
-* Eseguire lo script per installare il modulo
-
-**File Conversion Service (FCS)**
-
-Il modulo FCS risiede nella cartella **e:\3di.it\platform\fcs**, come nei casi precedenti, nel percorso **e:\3di.it\platform\fcs\bin** è presente il solito file **install.bat** (si riporta solo la dichiarazione delle variabili da configurare della versione distribuita a partire dalla release //3.6.1.0// di FCS):
-
-    ...
-    set _W=E:\3di.it\platform\fcs
-    set _O=E:\LibreO~1.org
-
-    rem set JAVA_HOME =
-    rem impostarla come variabile di sistema, altrimenti scrivere il percorso esplicito nella variabile sottostante
-    set _J=%JAVA_HOME%\jre\bin\server\jvm.dll
-
-    rem CLASSPATH per OO 2
-    rem set _L=..........
-
-    rem CLASSPATH per OO 3
-    rem set _L=..........
-
-    ...
-
-* Inserire per la variabile "_J" il valore "C:\Progra~1\Java\jre6\bin\client\jvm.dll"
-* Inserire per la variabile "_W" il valore "E:\3di.it\platform\fcs"
-* Inserire per la variabile "_O" il valore "E:\LibreO~1.org" (come da installazione LibreOffice)
-* Eseguire lo script per installare il modulo
-
-Per poter utilizzare l'FCS inoltre è necessario installare alcune librerie nel sistema:
-
-* Copiare il contenuto della cartella e:\3di.it\platform\fcs\bin\system32 dal pacchetto nella cartella di sistema di windows c:\windows\system32
-
-**Imagemagick e Tesseract**
-
-Per poter utilizzare alcune delle funzionalità di conversione degli allegati sono necessari questi componenti che si trovano all'interno della cartella **fcs_utils** del cd. Si consiglia di installare queste utility in **e:\programmi**. Tesseract dalle ultime versioni è integrato all'interno della cartella platform mentre per imagemagick esiste un setup.exe. Nel caso si vogliano modificare i percorsi di installazione sarà necessario modificare di conseguenza il file **e:\3di.it\platform\fcs\classes\it.extrawaytech.fcs.properties**.
-
-* Installare Imagemagick in e:\programmi
-
-**Msxml**
-
-La libreria msxml è necessaria per la trasformazione dell'xml a livello server. Eseguire il setup dalla cartella omonima del cd, non è necessario modificare nulla nelle impostazioni del setup.
-* Installare Msxml utilizzando il setup nella cartella msxml del CD
-
-**Registrazione del servizio eXtraWay**
-
-Per poter utilizzare il modulo xw è necessario effettuare la registrazione:
-
-* Eseguire e:\3di.it\extraway\xw\bin\xw.exe
-
-Nel System tray apparirà un icona con il logo di eXtraWay, con il tasto sinistro del mouse sopra l'icona si aprirà una schermata
-
-* Premere il pulsante "Registration" (Il pulsante nelle versioni precedenti è "Aggiorna licenza").
-
-Si aprirà un altra finestra col nome "eXtraWay Server Installation" che richiede "Insert the number of workstations to activate". Il numero di postazioni indica il numero di istanze massime che possono essere attive in contemporanea sul server((Per convenzione di solito questo numero è il numero massimo degli utenti contemporanei  che utilizzeranno il server diviso 15 e può dipendere anche dalle prestazioni della macchina)).
-
-* Inserire il numero di postazioni massime
-* Inserire il numero di serie (se presente)
-* Inserire il nome del responsabile e l'organizzazione
-
-Una volta completata la registrazione compare una finestra "registrazione completata" al di sotto della prima finestra, premere ok per chiudere la procedura.
 
 ##### Ordine di avvio dei servizi
 
@@ -1337,49 +1052,20 @@ Es.
 
 **In alternativa è possibile assegnare ad extraway le singole cartelle in opt, tuttavia ciò potrebbe richiedere accesso amministrativo per effettuare aggiornamenti futuri.**
 
-**LibreOffice**
-Nel caso si sia scelta la procedura di installazione manuale estrarre il pacchetto LibreOffice.
-
-Es.
-
-    /opt# tar xzf LibO_3.3.1_Linux_x86_install-rpm_en-US.tar.gz
-
-Eseguire il comando di installazione di LibreOffice (install.sh) dalla cartella estratta e seguire le indicazioni. Solitamente non è necessario cambiare nessun parametro dall'installazione di default.
-
-Nel caso invece si pensi di utilizzare la versione della propria distribuzione è necessario controllare che i percorsi della cartella base di libreoffice e dei componenti basis e URE siano corretti nel file /opt/it-3di/platform/fcs/conf/extraway-fcs.conf
-
 ##### Accorgimenti per sistemi con versione di glibc antecedente alla 2.7
 
 In alcuni sistemi è necessario installare la versione compatibile degli eseguibili eXtraWay. Questa versione è compilata con glibc 2.5.
 
-Per installarli copiare i file contenuti in /opt/it-3di/extraway/xw/platform-dependent/bin-Linux/i586 in /opt/it-3di/extraway/xw/bin
+Per installarli copiare i file contenuti in /opt/3di.it/extraway/xw/platform-dependent/bin-Linux/i586 in /opt/it-3di/extraway/xw/bin
 
 ##### Registrazione del motore del database (Extraway)
 
-Per poter utilizzare Docway3 è necessario ottenere le licenze dal nostro settore commerciale.
-
-Una volta ottenute le licenze eseguire il seguente comando dalla cartella /opt:
-  
-    /opt~$ ./demo.sh registration
-
-Dopo aver inserito il numero di licenze attivate, apparirà un numero.
-
-Es. (per 10 licenze)
-
-    Entrato  
-    Inizializzato  
-    Analisi Parametri  
-    Impostare il numero di postazioni da Abilitare  
-    (-1=annulla, Invio=100):10  
-    Inserire la chiave di abilitazione per 10-76469290
-
-Comunicare all'assistenza 3di il numero ottenuto e inserire la chiave di abilitazione e il numero seriale che verranno forniti in cambio.
-
-Successivamente inserire anche il nome e la società relativo al contratto di licenza.
+Per poter utilizzare appieno eXtraWay è necessario ottenere le licenze dal nostro settore commerciale.
 
 **Automatismi**
 
-Per utima cosa bisogna procedere a configurare il sistema operativo per interagire con i componenti in modo automatico.
+Per ultima cosa bisogna procedere a configurare il sistema operativo per interagire con i componenti in modo automatico.
+Nella platform sono presenti le routine systemd.
 
 ##### Script di avvio
 
@@ -1387,75 +1073,14 @@ Gli script per caricare automaticamente l'applicativo all'avvio della macchina (
 
 * tomcat7
 * extraway (motore database)
-* extraway-fca (File Conversion Agent)
-* extraway-fcs (File Conversion Service)
-* extraway-msa (Mail Storage Agent)
+* docway-fca (File Conversion Agent)
+* docway-fcs (File Conversion Service)
+* docway-msa (Mail Storage Agent)
 
 Tutti accettano i comandi start, stop e restart.
 
 >NOTA: gli script all'interno di questa sezione sono tutti configurabili nel caso ci sia necessità di cambiare i percorsi di installazione.
-___
-**Installazione automatica con script 3di**
 
-Sono disponibili già per alcune distribuzioni degli script per inserirli automaticamente all'interno del sistema rc.d:
-
-  * [Debian, Ubuntu](ftp://ftp.3di.it/extra/init-scripts/init.d_setup_debian.sh) (utilizza update-rc.d)
-  * [Redhat, Fedora e Centos](ftp://ftp.3di.it/extra/init-scripts/chkconfig_initd.tar.bz2) (da copiare in /etc/init.d e attivare con chkconfig)
-  * [Gentoo](ftp://ftp.3di.it/extra/init-scripts/gentoo_initd.tar.bz2) (da copiare in /etc/init.d e attivare con rc-update)
-  * [script generico](ftp://ftp.3di.it/extra/init-scripts/init.d_setup_generic.sh) (crea direttamente i link in rc.d)
-
->ATTENZIONE: l'esecuzione di alcuni di questi script richiede diritti amministrativi
-___
-**Installazione Manuale**
-
-È possibile anche installare questi file manualmente. È necessario creare dei link ai file in /opt/3di.it/extra/init-files/ in /etc/init.d e successivamente creare da questi dei link nei diversi runlevel:
-
-Es.
-
-    ~# ln -s /opt/it-3di/extra/init-files/extraway /etc/init.d/  
-    ~# ln -s /etc/init.d/extraway /etc/rc0.d/K20extraway  
-    ~# ln -s /etc/init.d/extraway /etc/rc1.d/K20extraway  
-    ~# ln -s /etc/init.d/extraway /etc/rc6.d/K20extraway  
-    ~# ln -s /etc/init.d/extraway /etc/rc2.d/S79extraway  
-    ~# ln -s /etc/init.d/extraway /etc/rc3.d/K79extraway  
-    ~# ln -s /etc/init.d/extraway /etc/rc4.d/K79extraway
-
-Si consiglia di spegnere tomcat leggermente prima, di seguito l'ordine di partenza e di spegnimento di tutti i servizi:
-
-* tomcat7: start 80 | stop 19
-* extraway: start  79 | stop 20
-* extraway-fca: start 79 | stop 20
-* extraway-fcs: start 79 | stop 20
-* extraway-msa: start 79 | stop 20
-
-**Registro di Protocollo**
-
-L'esportazione del RIP può essere attivata aggiungendo al crontab dell'utente extraway il comando /opt/3di.it/docway3/rip/bin/rip
-
-Es.
-    ~$ crontab -e  
-    35 22 * * * /opt/it-3di/docway3/rip/bin/rip </dev/null
-  
-**Backup**
-
-È altamente consigliato mantenere un backup dell'intera cartella it-3di (anche incrementale volendo).
-
-Per fare ciò è necessario fermare i servizi extraway e tomcat6 prima di eseguire lo script di backup vero e proprio.
-
-Es. script backup da inserire nel crontab di root:
-
-    /etc/init.d/tomcat7 stop  
-    /etc/init.d/extraway-msa stop  
-    /etc/init.d/extraway-fcs stop  
-    /etc/init.d/extraway-fca stop  
-    /etc/init.d/extraway stop  
-    <comando backup>
-    /etc/init.d/extraway start  
-    /etc/init.d/extraway-fca start  
-    /etc/init.d/extraway-fcs start  
-    /etc/init.d/extraway-msa start  
-    /etc/init.d/tomcat7 start
-  
 **Controlli finali**
 
 Dopo aver verificato che le applicazioni si avviino correttamente controllare in prima battuta i log di:
@@ -1463,7 +1088,7 @@ Dopo aver verificato che le applicazioni si avviino correttamente controllare in
 * Tomcat
 * DocWay4
 * DocWay4-service
-* 3DWS (Se presenti)
+* 3DIWS (Se presenti)
 * ExtraWayWorkFlowOS (Se presenti)
 
 Se non sono presenti errori tentare un login su DocWay e verificare la presenza di eventuali errori nei log:
@@ -1472,8 +1097,3 @@ Se non sono presenti errori tentare un login su DocWay e verificare la presenza 
 * DocWay4-service
 
 È buona norma comunicare al referente del progetto l'avvenuta installazione o aggiornamento degli applicativi.
-
-  
-**Patch installate**
-
-Per Docway4 vengono rilasciate della patch e seguono una numerazione a se stante. Per individuare la versione di patch installata leggere il file Patch_level.txt presente nella root dell'applicativo.
