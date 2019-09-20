@@ -24,7 +24,7 @@ Crea una VM Debian 10 con installato e avviato:
 
 
 #### Avvio
-Dopo acer scaricato il pacchetto [platform](ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz) per linux
+Dopo aver scaricato il pacchetto [platform](ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz) per linux
 posizionarsi dentro la cartella del progetto e lanciare ```vagrant up```
 
 #### Accesso alle applicazioni
