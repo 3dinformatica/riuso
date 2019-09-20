@@ -128,7 +128,7 @@ Di seguito è descritto il formato del record di AUDIT registrato su archivio Mo
 
 | Campo | Descrizione |
 |--|--|
-| _id |  Identificaivo del record su MongoDB (record di Audit) |
+| _id | Identificaivo del record su MongoDB (record di Audit) |
 | archivio | Nome del database utilizzato dall'applicazione sottoposta a AUDIT (supporto ad applicazioni multi-database) |
 | nrecord | Identificato del record dell'applicativo |
 | tipoRecord | Identifica la tipologia di record al quale l'audit fa riferimento |
@@ -182,7 +182,7 @@ eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze
 |[- Installazione su piattaforma Windows di DocWay4](https://github.com/3dinformatica/riuso/blob/master/README.md#--installazione-su-piattaforma-windows-di-docway-4)|
 |[- Installazione su piattaforma Linux di DocWay4](https://github.com/3dinformatica/riuso/blob/master/README.md#--installazione-su-piattaforma-linux-di-docway-4)|
 
-### 1. VM gestita da vagrant
+## 1. VM gestita da vagrant
 ___
 Per avere a disposizione una VM in cui far girare il sistema documentale DocWay, comprensivo dei moduli su descritti, e testarlo occorre scaricare la cartella **DebDocWay**
 
@@ -204,40 +204,40 @@ Per avere a disposizione una VM in cui far girare il sistema documentale DocWay,
 Dopo aver testato il funzionamento fare pulizia con il comando: vagrant destroy --force
 
 
-### 2. Installazione singoli pacchetti
+## 2. Installazione singoli pacchetti
 ___
-#### Istruzioni installazione eXtraWay come platform
+### Istruzioni installazione eXtraWay come platform
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 ___
-#### - Installazione su piattaforma Windows di eXtraWay Platform
+### - <u>Installazione su piattaforma Windows di eXtraWay Platform</u>
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
-##### Requisiti Hardware
+### Requisiti Hardware
 
 Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo. In linea di massima le prestazioni di eXtraWay dipendono dalla velocità dei dispositivi di memorizzazione, dalla velocità della rete e, per la gestione di allegati non testuali, dalla memoria RAM.
 
-###### Requisiti Minimi
+#### Requisiti Minimi
 
 * Processore Intel Xeon 2.00 Ghz o compatibile
 * 4 GB di RAM
 * Disco rigido dedicato con almeno 100 GB (per un archivio medio con allegati)
 
-###### Consigliati
+#### Consigliati
 
 Per un utilizzo medio: circa 30 utenti collegati contemporaneamente, un milione di documenti.
 
-  * Processore Intel Xeon multicore o compatibile
-  * 4 GB di RAM
-  * Almeno 3 dischi SATA in RAID 5 o un sistema alternativo di memorizzazione
-  * Almeno 300 GB sul sitema di memorizzazione scelto
-  * Scheda di rete Gigabit o superiore
-  * Alimentazione tramite gruppo di continuità
+* Processore Intel Xeon multicore o compatibile
+* 4 GB di RAM
+* Almeno 3 dischi SATA in RAID 5 o un sistema alternativo di memorizzazione
+* Almeno 300 GB sul sitema di memorizzazione scelto
+* Scheda di rete Gigabit o superiore
+* Alimentazione tramite gruppo di continuità
 
-##### Requisiti software
+### Requisiti software
 
-**Server**
+#### Server
 
 * Windows server 2003 sp2
 
@@ -247,9 +247,10 @@ Per un utilizzo medio: circa 30 utenti collegati contemporaneamente, un milione 
 
 * Antivirus che possa essere configurato con eccezioni per quanto riguarda il controllo dei processi (ad esempio panda non funziona)
 
-###### Installazione
+### Installazione
 
-**Pacchetto eXtraWay Platform**
+#### Pacchetto eXtraWay Platform
+
 Scaricare il pacchetto [eXtraWay Platform per Windows](ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-windows.zip)
 
 Il pacchetto ExtraWay Platform è suddiviso in cartelle, di seguito la funzione di ogni componente:
@@ -261,14 +262,14 @@ Il pacchetto ExtraWay Platform è suddiviso in cartelle, di seguito la funzione 
 * **3di.it\extraway\xw:** cartella contenente il server per il database eXtraWay.
 * **3di.it\extraway\xw\db:** Contiene un archivio di esempio con alcuni record di esempio, utilizzabile con i webservices.
 * **xw3rdparts:** contiene librerie di terze parti per la manipolazione degli xml e la compressione di files con le rispettive licenze d'uso.
-___
-**Java**
+
+##### Java
 
 Eseguire il setup di java dalla cartella Jre del pacchetto.
 
 Non è necessario cambiare alcuna configurazione durante l'esecuzione del setup. Di base il Java Runtime Environment ha come destinazione **C:\Programmi\Java\jdk8\**.
-___
-**Tomcat**
+
+##### Tomcat
 
 Eseguire il setup di tomcat dalla cartella del pacchetto. Anche qui non è necessario modificare alcuna impostazione durante l'esecuzione del setup and eccezione della cartella di destinazione: **e:\Programmi\Apache Software Foundation\Tomcat 8.0**
 
@@ -319,8 +320,8 @@ Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il per
     </GlobalNamingResources>
 
 * Inserire il parametro **"readonly=false"** all'interno dell'attributo **"Realm"** (UserDatabase) nel file **e:\Programmi\Apache Software Foundation\Tomcat 6.0\conf\server.xml**
-___
-**Console**
+
+##### Console
 
 Di base l'applicativo viene installato nel disco dedicato che per comodità indicheremo come e:
 
@@ -342,12 +343,12 @@ questo file è utilizzato per localizzare l'applicativo sul disco, al suo intern
     </Context>
 
 * Copiare dalla cartella e:\3di.it\console\xway il file xway.xml nella cartella e:\programmi\Apache Software Foundation\Tomcat 6.0\conf\Catalina\localhost\
-___
-**Microsoft Visual C++ 2008 Redistributable**
+
+##### Microsoft Visual C++ 2008 Redistributable
 
 Prima dell'installazione del servizio extraxay sarà necessario installare dal pacchetto Microsoft Visual C++ 2008 Redistributable, eseguendo **vcredist_x86.exe dalla cartella msvc9**
-___
-**Extraway**
+
+##### Extraway
 
 Il server per il database solitamente risiede nella cartella **e:/3di.it/extraway/**.
 
@@ -376,8 +377,8 @@ Dopo aver registrato l'applicazione procedere con l'installazione del servizio:
 Aprire un prompt dei comandi (cmd.exe) e digitare il percorso della cartella contenente l'eseguibile xw.exe (es. 'e:\3di.it\extraway\xw\bin\xw.exe') ,
 
 Lanciare il comando per l'installazione del servizio: 'xw.exe -service_install'
-___
-###### Webservices
+
+#### Webservices
 
 Solitamente i webservice si trovano nel percorso **E:\3di.it\webservices\/**.
 
@@ -387,8 +388,8 @@ Per installarli è necessario inserire nella cartella di configurazione di Tomca
 * Modificare il file xJwsClient.xml e inserire il percorso E:\3di.it\webservices\xJwsClient
 * Copiare il file 3diws.xml dalla cartella E:\3di.it\webservices\
 * Modificare il file 3diws.xml e inserire il percorso E:\3di.it\webservices\3diws
-___
-**Registrazione del servizio eXtraWay**
+
+### Registrazione del servizio eXtraWay
 
 Per poter utilizzare il modulo xw è necessario effettuare la registrazione:
 
@@ -408,24 +409,24 @@ Cliccando con il tasto sinistro del mouse sopra l'icona si aprirà una schermata
 
 Una volta completata la registrazione compare una finestra "registrazione completata" al di sotto della prima finestra, premere ok per chiudere la procedura.
 ___
-#### - Installazione su piattaforma Linux di ExtraWay Platform
+### - Installazione su piattaforma Linux di ExtraWay Platform
 
 Scaricare il pacchetto [eXtraWay Platform per Linux](ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz)
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
-##### Requisiti Hardware
+#### Requisiti Hardware
 
 Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo.
 In linea di massima le prestazioni di eXtraWay Platform dipendono dalla velocità dei dispositivi di memorizzazione, dalla velocità della rete e, per la gestione di allegati non testuali, dalla memoria RAM.
 
-###### Requisiti Minimi
+##### Requisiti Minimi
 
 * Processore Intel Xeon o compatibile
 * 4 GB di RAM
 * Disco rigido dedicato con almeno 100 GB (per un archivio medio con allegati)
 
-###### Consigliati
+##### Consigliati
 
 Per un utilizzo medio: circa 30 utenti collegati contemporaneamente, un milione documenti.
 
@@ -436,11 +437,11 @@ Per un utilizzo medio: circa 30 utenti collegati contemporaneamente, un milione 
 * Scheda di rete Gigabit o superiore;
 * Alimentazione tramite gruppo di continuità;
 
-##### Requisiti software
+#### Requisiti software
 
-**Server**
+##### Server
 
-###### Distribuzioni Linux Supportate
+##### Distribuzioni Linux Supportate
 
 eXtraway Platform è stato testato ed è utilizzato con diverse distribuzioni:
 
@@ -473,11 +474,11 @@ Le librerie di sistema necessarie al corretto funzionamento dei componenti che c
 
 >ATTENZIONE: Gli eseguibili del motore eXtraWay non hanno ancora una versione dispobibile a 64bit. È necessario pertanto installare le librerie di compatibilita ia32 sulle macchine a 64 bit della maggior parte delle distribuzioni. Inoltre esistono alcuni casi riportati ((Al momento RHEL 5.6)) sul quale è necessario installare manualmente le librerie elencate in versione 32bit. Se non è possibile effettuare questi passaggi o le librerie indicate non sono presenti, la specifica distribuzione non è supportata.
 
-**Per installare le librerie su sistemi Ubuntu usare il seguente comando:**
+##### Per installare le librerie su sistemi Ubuntu usare il seguente comando:
 
     sudo apt-get install libgcc1:i386 libzip2:i386 libc6:i386 libxml2:i386 libxslt1.1:i386 libcurl3:i386 libncurses5:i386 libreadline6:i386 libstdc++6:i386
 
-**Per installare le librerie su sistemi Debian recenti (Debian 10) usare il seguente comando da root:**
+##### Per installare le librerie su sistemi Debian recenti (Debian 10) usare il seguente comando da root:
 
     <code bash>  
     dpkg --add-architecture i386
@@ -488,40 +489,39 @@ Le librerie di sistema necessarie al corretto funzionamento dei componenti che c
     apt-get install libgcc1:i386 libzip4:i386 libc6:i386 libxml2:i386 libxslt1.1:i386 libcurl4:i386 libncurses5:i386 libreadline7:i386 libstdc++6:i386 libxslt1.1:i386 libzip4:i386
     </code>
 
-**Per installare le librerie su sistemi RedHat/CentOS usare il seguente comando:**
+##### Per installare le librerie su sistemi RedHat/CentOS usare il seguente comando:
 
     yum install libgcc.i686 libzip.i686 glibc.i686 libxml2.i686 libxslt.i686 libcurl.i686 ncurses-libs.i686 readline.i686 libstdc++.i686
 
-
-###### Pdftotext
+##### Pdftotext
 
 Per l'indicizzazione degli allegati in formato pdf è necessario installare l'utilità pdftotext.
 
-In molte distribuzioni non è compresa nell'installazione di base: in alcune distribuzioni è presente all'interno del pacchetto //xpdf// (centos 4, redhat enterprise) o nel pacchetto //poppler-utils// (gentoo, ubuntu, debian, centos 5).
+In molte distribuzioni non è compresa nell'installazione di base: in alcune distribuzioni è presente all'interno del pacchetto *xpdf* (centos 4, redhat enterprise) o nel pacchetto *poppler-utils* (gentoo, ubuntu, debian, centos 5).
 
-###### Imagemagick
+##### Imagemagick
 
 Per l'indicizzazione e la conversione degli allegati in formato grafico è necessario installare l'utilità imagemagick.
 
 In alcune distribuzioni non è compresa nell'installazione di base: tuttavia il pacchetto omonimo solitamente è presente tra quelli installabili.
 
 
-**Per installare le librerie su sistemi Debian usare il seguente comando:**
+##### Per installare le librerie su sistemi Debian usare il seguente comando:
 
     <code bash>apt-get install poppler-utils imagemagick</code>
 
-#### Installazione e configurazione
+### Installazione e configurazione
 
-##### Preparazione dell'installazione
+#### Preparazione dell'installazione
 
-**Componenti che verranno installati**
+##### Componenti che verranno installati
 
 * Apache Tomcat 7.x
 * Sun Java Runtime Environment 1.8.x
 * LibreOffice 5.x
 * ExtraWay Platform
 
-**Preparazione della macchina server**
+##### Preparazione della macchina server
 
 È consigliato mantenere l'installazione dell'applicativo in un dispositivo di memorizzazione separato rispetto a quello che ospita il sistema operativo.
 
@@ -535,12 +535,12 @@ __Creare un utente con nome "extraway". Questo sarà l'utente con cui verranno e
     useradd -m extraway
     </code>
 
-**Copia dei files**
+##### Copia dei files
 
 Copiare il pacchetto di installazione di Extraway nella cartella /opt.
 Nel caso non sia possibile utilizzare il sistema di pacchetti integrato per l'installazione di libreoffice. È possibile dal [sito libreoffice](http://www.libreoffice.org) ottenere l'elenco dei repository personalizzati oppure scaricare il pacchetto generico. È possibile anche scaricare una [versione generica](ftp://ftp.3di.it/extra/libreoffice/LibO_3.3.1_Linux_x86_install-rpm_en-US.tar.gz) dal nostro sito ftp.
 
-**Abilitare permessi di scrittura sul tomcat-users.xml**
+##### Abilitare permessi di scrittura sul tomcat-users.xml
 
 Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il permesso di scrittura è necessario inserire il parametro "readonly=false" nel server.xml di Tomcat:
 
@@ -559,7 +559,7 @@ Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il per
 
 * Inserire il parametro "readonly=false" all'interno dell'attributo "Realm" (UserDatabase)" nel file /opt/apache-tomcat-7.X/conf/server.xml
 
-**Impostazione parametri del kernel per eXtraWay in /etc/sysctl.conf**
+##### Impostazione parametri del kernel per eXtraWay in /etc/sysctl.conf
 
 Dalla release 24, eXtraWay necessita di ulteriore memoria condivisa a disposizione, rifiutandosi di partire nel caso questa non sia a disposizione.
 
@@ -603,26 +603,26 @@ Per installarli copiare i file contenuti in /opt/it-3di/extraway/xw/platform-dep
 
 Per poter utilizzare appieno eXtraWay è necessario effettuare la registrazione.
 
-**Automatismi**
+### Automatismi
 
 Per ultima cosa bisogna procedere a configurare il sistema operativo per interagire con i componenti in modo automatico.
 All'interno della platform sono disponibili le routine systemd
 
 >NOTA: gli script all'interno di questa sezione sono tutti configurabili nel caso ci sia necessità di cambiare i percorsi di installazione.
 ___
-#### Uso di Antivirus nelle installazioni eXtraWay
+### Uso di Antivirus nelle installazioni eXtraWay
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
 La presenza di un antivirus nelle installazioni della piattaforma eXtraWay può comportare due distinti ordini di problemi: di natura prestazionale e di natura funzionale.
 
-**Aspetto Prestazionale**
+#### Aspetto Prestazionale
 I software antivirus più diffusi eseguono scansioni "Real-time" sul sistema operativo e sui processi. Può accadere quindi che scansioni e blocchi troppo invasivi rallentino o fermino del tutto i componenti Tomcat (applicativo) o eXtraWay (motore del database).
 
-**Aspetto Funzionale**
+#### Aspetto Funzionale
 È prassi comune che gli antivirus riconoscano come comportamento rischioso, potenzialmente maligno, uno dei comportamenti del server eXtraWay. Per ovviare a quest'inconveniente è necessario agire sulle impostazioni dell'antivirus.
 
-**Esclusioni**
+#### Esclusioni
 Per poter utilizzare comunque il software antivirus è necessario impostare una o più liste di esclusione: esistono principalmente 2 tipi di lista a seconda del software utilizzato. Esse si riferiscono ai files/cartelle delle quali non si richiede che venga compiuta verifica e l'elenco degli eseguibili che possono essere considerati affidabili.
 
 ##### Interventi di tipo prestazionale
@@ -667,7 +667,7 @@ Per ovviare a questo bisogna necessariamente istruire il sistema antivirus perch
 |\3di.it\extraway\xw\bin\xw.exe|
 |\Programmi\Apache Software Foundation\Tomcat 6.0\bin\tomcat6.exe|
 
-I percorsi in entrambe le liste possono variare a seconda delle installazioni, tuttavia è possibile recuperare l'esatta posizione controllando nelle proprietà dei servizi di Windows.//
+I percorsi in entrambe le liste possono variare a seconda delle installazioni, tuttavia è possibile recuperare l'esatta posizione controllando nelle proprietà dei servizi di Windows.
 
 ##### Configurazioni antivirus già testate con eXtraWay
 
@@ -675,42 +675,42 @@ Nel corso del tempo sono state verificate diverse installazioni nelle quali è s
 
 Dal momento che ogni software antivirus ha propria configurazione e che essi evolvono naturalmente nel tempo, non viene descritto in questa sede il procedimento da seguire rimandando il dettaglio alla documentazione degli stessi.
 
-**Antivirus efficacemente verificati:**
+#### Antivirus efficacemente verificati:
 
-  * Norton Antivirus
-  * NOD32 (Versione esistente al 2010)
-  * Kaspersky Anti-Virus
+* Norton Antivirus
+* NOD32 (Versione esistente al 2010)
+* Kaspersky Anti-Virus
 
 Va altresì detto che qualora un antivirus imponga limiti funzionali ma senza dare la possibilità di compilare liste di esclusione, esso risulta di fatto incompatibile con le installazioni eXtraWay.
 
 Allo stato attuale risultano
 
-**Antivirus incompatibili:**
+#### Antivirus incompatibili:
 
-  * Panda Antivirus Titanum 2004
+* Panda Antivirus Titanum 2004
 
 -------
 
 >**N.B.:** Gli elenchi riportati sono da considerarsi __meramente indicativi e non esaustivi__. 3D Informatica __non può considerarsi responsabile__ qualora nuove versioni di antivirus verificati risultassero incompatibili ne può garantire che nuove versioni degli antivirus noti come incompatibili risultino di fatto utilizzabili. Chi fosse intenzionato ad acquisire un software antivirus per proteggere le proprie installazioni eXtraWay dovrà, __sotto la propria responsabilità__, raccogliere informazioni sufficienti per garantirsi la possibilità di sottoporre a tale software liste di esclusioni quanto meno per gli aspetti funzionali.
 ___
-#### Istruzioni installazione DocWay
+### Istruzioni installazione DocWay
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 ___
-#### - Installazione su piattaforma Windows di DocWay 4
+### - Installazione su piattaforma Windows di DocWay 4
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
-##### Requisiti Hardware
+#### Requisiti Hardware
 
 Le specifiche della macchina server dipendono principalmente dal numero di utenti che utilizzerà l'applicativo e dal tipo di utilizzo. In linea di massima le prestazioni di DocWay 4 dipendono dalla velocità dei dispositivi di memorizzazione, dalla velocità della rete e, per la gestione di allegati non testuali, dalla memoria RAM.
 
-###### Requisiti Minimi
+##### Requisiti Minimi
 
 * Processore Intel Xeon 2.00 Ghz o compatibile
 * 4 GB di RAM
 * Disco rigido dedicato con almeno 150 GB (per un archivio medio con allegati)
 
-###### Consigliati
+##### Consigliati
 
 Per un utilizzo medio: circa 30 utenti collegati contemporaneamente, un milione documenti.
 
@@ -721,9 +721,9 @@ Per un utilizzo medio: circa 30 utenti collegati contemporaneamente, un milione 
 * Scheda di rete Gigabit o superiore
 * Alimentazione tramite gruppo di continuità
 
-##### Requisiti software
+#### Requisiti software
 
-**Server**
+##### Server
 
 * Windows server 2003 sp2 con Internet Information Server 6.0
 * Windows server 2008 r2 64bit con Internet Information Server 7.5
@@ -732,11 +732,11 @@ Per un utilizzo medio: circa 30 utenti collegati contemporaneamente, un milione 
 * Accesso tramite remote desktop o vnc((Nel caso si voglia usufruire dell'assistenza da remoto da parte di 3DI))
 * DBMS a scelta tra Mysql, PostGreSQL, Oracle (per il supporto ai workflow)
 
-**Client**
+##### Client
 
 Macchina client con collegamento di rete diretto al server, si sconsiglia l'utilizzo di indirizzi mappati con tecnologia NAT.
 
-**Browser supportati**
+###### Browser supportati
 
 * Internet Explorer 9
 * Internet Explorer 10
@@ -746,13 +746,13 @@ Macchina client con collegamento di rete diretto al server, si sconsiglia l'util
 
 Per maggiori dettagli relativi al supporto browser, consultare la [seguente pagina](documentazione_3di:docway4:browser_compat).
 
-**Plugin Java**
+###### Plugin Java
 
 Per usufruire di alcune funzionalità (firma digitale dei file, per esempio) è necessario installare un [Java Runtime Environment](http://java.com) col relativo plugin per i vari browser.
 
-##### Installazione
+#### Installazione
 
-**Anatomia del pacchetto di installazione**
+##### Anatomia del pacchetto di installazione
 
 Il pacchetto di installazione contiene i moduli di DocWay4 suddivisi in cartelle, di seguito la funzione di ogni componente:
 
@@ -778,12 +778,10 @@ Consigliamo di installare i nostri applicativi in un disco separato rispetto a q
 
 Eseguire il setup di java dalla cartella jre del cd.
 
-
 Non è necessario cambiare alcuna configurazione durante l'esecuzione del setup.
 Di base il Java Runtime Environment ha come destinazione
 
     C:\Programmi\Java\jdk8
-
 
 ###### Tomcat
 
@@ -793,7 +791,6 @@ Eseguire il setup di Tomcat dalla cartella del cd. Durante l'installazione sarà
 * Lasciare invariate le porte di default e gli altri parametri, a meno di particolari esigenze.
 * Selezionare il percorso di un Java Runtime Environment già installato nel sistema per avviare Tomcat (ovvero, quello installato al punto precedente della guida).
 * Modificare la directory di destinazione: nonostante questo non sia necessario, consigliamo di installare Tomcat all'interno dalla root di installazione prescelta (i.e. E:), nel percorso E:\programmi\Apache Software Foundation\Tomcat 7.0.
-
 
 Una volta terminata l'installazione si dovranno impostare altre opzioni tramite "Configure Tomcat" dal menù delle Applicazioni:
 
@@ -807,7 +804,7 @@ Per poter utilizzare l'utente base di Tomcat (solitamente admin) come utente amm
 
     <user username="admin" password="xxxxxx" roles="admin,manager-gui,jspuser,admjspuser"/>
 
-**Cifratura delle password nel tomcat-users.xml**
+###### Cifratura delle password nel tomcat-users.xml
 
 Di base le password all'interno del file tomcat-users.xml sono in chiaro, per abilitare la cifratura è necessario inserire il parametro "digest=MD5" nel server.xml di Tomcat:
 
@@ -817,9 +814,9 @@ Di base le password all'interno del file tomcat-users.xml sono in chiaro, per ab
 
 * Inserire il parametro "digest=MD5" all'interno dell'attributo "Realm" (UserDatabase)" nel file e:\Programmi\Apache Software Foundation\Tomcat 6.0\conf\server.xml
 
-Qualora si abilitasse la cifratura bisognerà quindi scrivere la corrispondente password cifrata con l'algoritmo MD5 nel campo password di  **tomcat-users.xml**
+Qualora si abilitasse la cifratura bisognerà quindi scrivere la corrispondente password cifrata con l'algoritmo MD5 nel campo password di **tomcat-users.xml**
 
-**Abilitare permessi di scrittura sul tomcat-users.xml**
+###### Abilitare permessi di scrittura sul tomcat-users.xml
 
 Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il permesso di scrittura è necessario inserire il parametro "readonly=false" nel server.xml di Tomcat:
 
@@ -835,7 +832,7 @@ Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il per
 
 * Inserire il parametro "readonly=false" all'interno dell'attributo "Realm" (UserDatabase)" nel file e:\Programmi\Apache Software Foundation\Tomcat 6.0\conf\server.xml
 
-**Docway**
+###### Docway
 
 Di base l'applicativo viene installato nel disco dedicato che per comodità indicheremo come e:
 
@@ -858,7 +855,7 @@ Per fare in modo che tomcat visualizzi l'applicazione è necessario copiare il f
 
 * Copiare dalla cartella e:\3di.it\DocWay4\xway il file xway.xml nella cartella e:\programmi\Apache Software Foundation\Tomcat 6.0\conf\Catalina\localhost\ (da creare)
 
-**Mail Archiver**
+###### Mail Archiver
 
 Il modulo Mail Storage Agent (MSA) consente di inserire delle mail all'interno del protocollo, semplicemente spedendole ad un indirizzo creato ad hoc.
 
@@ -883,11 +880,11 @@ __Per poter usufruire di questo servizio, è necessario inserirlo nelle operazio
 
 * Inserire il file e:\3di.it\DocWay4\rip\bin\rip nelle operazioni pianificate di Windows, in modo che sia eseguito ciclicamente (si consiglia un esportazione giornaliera)
 
-**Microsoft Visual C++ 2008 Redistributable**
+###### Microsoft Visual C++ 2008 Redistributable
 
 Prima dell'installazione del servizio extraxay sarà necessario installare dal pacchetto Microsoft Visual C++ 2008 Redistributable, eseguendo vcredist_x86.exe dalla cartella msvc9
 
-**Extraway**
+###### Extraway
 
 Il server per il database solitamente risiede nella cartella **e:/3di.it/extraway/**.
 
@@ -910,12 +907,12 @@ L'ordine per effettuare l'avvio dei servizi tramite l'utility **services.msc** �
 * eXtraWay Mail Archiver
 * Tomcat
 ___
-#### - Installazione su piattaforma Linux di DocWay 4
+### - Installazione su piattaforma Linux di DocWay 4
 ###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
-##### Prerequisiti software
+#### Prerequisiti software
 
-**Server**
+##### Server
 
 ###### Distribuzioni Linux Supportate
 
@@ -947,11 +944,11 @@ Le librerie di sistema necessarie al corretto funzionamento dei componenti che c
 
 >ATTENZIONE: Gli eseguibili del motore eXtraWay non hanno ancora una versione dispobibile a 64bit. È necessario pertanto installare le librerie di compatibilita ia32 sulle macchine a 64 bit della maggior parte delle distribuzioni. Inoltre esistono alcuni casi riportati ((Al momento RHEL 5.6)) sul quale è necessario installare manualmente le librerie elencate in versione 32bit. Se non è possibile effettuare questi passaggi o le librerie indicate non sono presenti, la specifica distribuzione non è supportata da Docway 3.10.2.
 
-**Per installare le librerie su sistemi Ubuntu usare il seguente comando:**
+###### Per installare le librerie su sistemi Ubuntu usare il seguente comando:
 
     sudo apt-get install libgcc1:i386 libzip2:i386 libc6:i386 libxml2:i386 libxslt1.1:i386 libcurl3:i386 libncurses5:i386 libreadline6:i386 libstdc++6:i386
 
-**Per installare le librerie su sistemi RedHat/CentOS usare il seguente comando:**
+###### Per installare le librerie su sistemi RedHat/CentOS usare il seguente comando:
 
     yum install libgcc.i686 libzip.i686 glibc.i686 libxml2.i686 libxslt.i686 libcurl.i686 ncurses-libs.i686 readline.i686 libstdc++.i686
 
@@ -973,19 +970,19 @@ Nel caso in cui si installi la versione di Libreoffice più recente e quindi da 
 
 **CLASSPATH=/usr/lib/libreoffice/program:$java_classes_home/../classes:$openoffice_ure/share/java/'*':$openoffice_basis/program/classes/'*':$java_classes_home/'*'**
 
-**Client**
+##### Client
 
 Macchina client con collegamento di rete diretto al server, si sconsiglia l'utilizzo di indirizzi mappati con tecnologia NAT.
 
-###### Browser supportati
+##### Browser supportati
 
 L'elenco completo è disponibile [qui](http://wiki.3di.it/doku.php?id=documentazione_3di:docway4:browser_compat&#compatibilita_browser_per_il_plugin_iwx)
 
-#### Installazione e configurazione
+### Installazione e configurazione
 
-##### Preparazione dell'installazione
+#### Preparazione dell'installazione
 
-###### Componenti che verranno installati
+##### Componenti che verranno installati
 
 * Apache Tomcat 7
 * Sun Java Runtime Environment 1.7.0
@@ -1004,7 +1001,7 @@ __Creare un utente con nome "extraway". Questo sarà l'utente con cui verranno e
 
     <code bash>adduser extraway</code>
 
-###### Copia dei files
+##### Copia dei files
 
 Copiare il pacchetto di installazione di Docway4 nella cartella /opt.
 
@@ -1014,7 +1011,7 @@ NB: per alcune distribuzioni (per es. CentOS) è necessario installare anche il 
 
 NB: Creare un link simbolico di 3di.it in it-3di
 
-**Abilitare permessi di scrittura sul tomcat-users.xml**
+###### Abilitare permessi di scrittura sul tomcat-users.xml
 
 Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il permesso di scrittura è necessario inserire il parametro "readonly=false" nel server.xml di Tomcat
 
@@ -1031,15 +1028,15 @@ Di base il file tomcat-users.xml è aperto in sola lettura, per abilitare il per
 
 * Inserire il parametro "readonly=false" all'interno dell'attributo "Realm" (UserDatabase)" nel file /opt/apache-tomcat-7.../conf/server.xml
 
-**Eccezioni su file jar**
+###### Eccezioni su file jar
 
 Se si utilizzano i 3diws modificare come segue la riga nel catalina.properties
 
     <code>org.apache.catalina.startup.ContextConfig.jarsToSkip=bc*.jar,cryptix*.jar</code>
 
-**Installazione dei pacchetti**
+##### Installazione dei pacchetti
 
-**Docway**
+###### Docway
 
 Estrarre il pacchetto docway nella cartella /opt.
 
@@ -1063,7 +1060,7 @@ Per installarli copiare i file contenuti in /opt/3di.it/extraway/xw/platform-dep
 
 Per poter utilizzare appieno eXtraWay è necessario ottenere le licenze dal nostro settore commerciale.
 
-**Automatismi**
+###### Automatismi
 
 Per ultima cosa bisogna procedere a configurare il sistema operativo per interagire con i componenti in modo automatico.
 Nella platform sono presenti le routine systemd.
@@ -1082,7 +1079,7 @@ Tutti accettano i comandi start, stop e restart.
 
 >NOTA: gli script all'interno di questa sezione sono tutti configurabili nel caso ci sia necessità di cambiare i percorsi di installazione.
 
-**Controlli finali**
+##### Controlli finali
 
 Dopo aver verificato che le applicazioni si avviino correttamente controllare in prima battuta i log di:
 
