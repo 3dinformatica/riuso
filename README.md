@@ -49,7 +49,7 @@ In base alla struttura appena descritta, è quindi possibile utilizzare le libre
 
 #### FCA
 
-**it.tredi.abstract-fca**: Configurazione del POOL di FCS con gestione del recupero e assegnazione dei lavori ai differenti processi di FCS (su server distinti).
+[**it.tredi.abstract-fca**](https://github.com/3dinformatica/abstract-fca): Configurazione del POOL di FCS con gestione del recupero e assegnazione dei lavori ai differenti processi di FCS (su server distinti).
 
 **it.tredi.docway-fca**: Implementazione per DocWay di FCA, ovvero recupero dei documenti di DocWay da processare (documenti contenenti allegati per i quali è richiesta la conversione e/o estrazione del testo).
 
@@ -57,7 +57,7 @@ In base alla struttura appena descritta, è quindi possibile utilizzare le libre
 #### FCS
 
 
-**it.tredi.abstract-fcs**: Elaborazione vera e propria dei files. Logiche di conversione e estrazione testo dai file (integrazione con le varie dipendenze software).
+[**it.tredi.abstract-fcs**](https://github.com/3dinformatica/abstract-fcs): Elaborazione vera e propria dei files. Logiche di conversione e estrazione testo dai file (integrazione con le varie dipendenze software).
 
 **it.tredi.docway-fcs**: Implementazione per DocWay di FCS (aggiornamento dell'esito dei lavori, registrazione dei file convertiti, indicizzazione del testo contenuto negli allegati del documento, etc.).
 
