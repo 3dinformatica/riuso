@@ -24,7 +24,7 @@ Per ciascun modulo descritto di seguito, vengono indicate le funzionalità princ
 ___
 ## [FCA](https://github.com/3dinformatica/docway-fca)/[FCS](https://github.com/3dinformatica/docway-fcs)
 
-###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
+###### [[Torna su]](https://github.com/3dinformatica/riuso)
 
 FCA (File Conversion Agent) e FCS (File Conversion Service) consistono in due processi che permettono l'**estrazione del testo da files** e la **conversione di files in un differente formato** (es. da DOC a PDF).
 
@@ -71,7 +71,7 @@ Requisiti per l'esecuzione di conversioni e estrazione di testo da parte di FCS:
 ___
 ## [Console Audit](https://github.com/3dinformatica/auditConsole)
 
-###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
+###### [[Torna su]](https://github.com/3dinformatica/riuso)
 
 Web Application grazie alla quale è possibile consultare i dati di audit registrati per uno o più applicativi. L'interfaccia web realizzata permette (previa autenticazione e autorizzazione) diversi filtri di ricerca sui risultati registrati tramite AUDIT:
 - Filtro su archivio (nome del database)
@@ -139,7 +139,7 @@ Di seguito è descritto il formato del record di AUDIT registrato su archivio Mo
 ___
 ## [MSA](https://github.com/3dinformatica/docway-msa)
 
-###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
+###### [[Torna su]](https://github.com/3dinformatica/riuso)
 
 MSA (Mail Storage Agent) è un servizio Java multi-processo che si occupa delle seguenti operazioni:
 * archiviazione delle email PEC e non (le mail vengono trasformate e salvate in documenti in DocWay XML);
@@ -164,7 +164,7 @@ Di seguito le funzionalità offerte:
 ___
 ## Istruzioni per le dipendenze eXtraWay e DocWay
 
-###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso)
+###### [[Torna su]](https://github.com/3dinformatica/riuso)
 
 eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze dei moduli liberati nei diversi repository pubblicati, possono essere installati in due differenti modalità.
 
@@ -208,11 +208,11 @@ Dopo aver testato il funzionamento fare pulizia con il comando: vagrant destroy 
 ___
 ### Istruzioni installazione eXtraWay come platform
 
-###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
+###### [[Torna su]](https://github.com/3dinformatica/riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 ___
 ### - <u>Installazione su piattaforma Windows di eXtraWay Platform</u>
 
-###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
+###### [[Torna su]](https://github.com/3dinformatica/riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
 ### Requisiti Hardware
 
@@ -413,7 +413,7 @@ ___
 
 Scaricare il pacchetto [eXtraWay Platform per Linux](ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz)
 
-###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
+###### [[Torna su]](https://github.com/3dinformatica/riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
 #### Requisiti Hardware
 
@@ -612,7 +612,7 @@ All'interno della platform sono disponibili le routine systemd
 ___
 ### Uso di Antivirus nelle installazioni eXtraWay
 
-###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
+###### [[Torna su]](https://github.com/3dinformatica/riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
 La presenza di un antivirus nelle installazioni della piattaforma eXtraWay può comportare due distinti ordini di problemi: di natura prestazionale e di natura funzionale.
 
@@ -695,10 +695,10 @@ Allo stato attuale risultano
 ___
 ### Istruzioni installazione DocWay
 
-###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
+###### [[Torna su]](https://github.com/3dinformatica/riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 ___
 ### - Installazione su piattaforma Windows di DocWay 4
-###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
+###### [[Torna su]](https://github.com/3dinformatica/riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
 #### Requisiti Hardware
 
@@ -908,7 +908,7 @@ L'ordine per effettuare l'avvio dei servizi tramite l'utility **services.msc** �
 * Tomcat
 ___
 ### - Installazione su piattaforma Linux di DocWay 4
-###### [[Torna su]](https://github.com/3dinformatica/riuso/blob/master/README.md#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
+###### [[Torna su]](https://github.com/3dinformatica/riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso/blob/master/README.md#istruzioni-per-le-dipendenze-extraway-e-docway)
 
 #### Prerequisiti software
 
