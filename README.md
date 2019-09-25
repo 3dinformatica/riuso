@@ -176,8 +176,8 @@ eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze
 |--|
 |[**Istruzioni installazione eXtraWay come platform**](https://github.com/3dinformatica/riuso#istruzioni-installazione-extraway-come-platform)|
 |[- Installazione su piattaforma Windows di Extraway Platform](https://github.com/3dinformatica/riuso#--installazione-su-piattaforma-windows-di-extraway-platform)|
-|[ -- Uso di Antivirus nelle installazioni eXtraWay](https://github.com/3dinformatica/riuso#uso-di-antivirus-nelle-installazioni-extraway)
 |[- Installazione su piattaforma Linux di ExtraWay Platform](https://github.com/3dinformatica/riuso#--installazione-su-piattaforma-linux-di-extraway-platform)|
+|[ -- Uso di Antivirus nelle installazioni eXtraWay](https://github.com/3dinformatica/riuso#uso-di-antivirus-nelle-installazioni-extraway)|
 |[**Istruzioni installazione DocWay**](https://github.com/3dinformatica/riuso#istruzioni-installazione-docway)|
 |[- Installazione su piattaforma Windows di DocWay4](https://github.com/3dinformatica/riuso#--installazione-su-piattaforma-windows-di-docway-4)|
 |[- Installazione su piattaforma Linux di DocWay4](https://github.com/3dinformatica/riuso#--installazione-su-piattaforma-linux-di-docway-4)|
