@@ -201,6 +201,7 @@ e averlo posizionato all'interno della cartella da dentro la stessa lanciare il 
 3) Aprire un browser e visitare la pagina http://localhost:18080/DocWay4/ ed inserire le seguenti credenziali per accedere a DocWay:
 
     username: admin
+    
     password: DocWay4
 
 4) Per il funzionamento dell'applicativo fare riferimento al [**Manuale Online**](https://wiki.3di.it/doku.php?id=documentazione_3di%3Adocway4%3Amanuali_utente%3Amanuale_utente_docway4) presente anche nella sezione **Aiuto** della HomePage di DocWay.
