@@ -184,7 +184,7 @@ eXtraWay e DocWay, applicazioni rilasciate in formato eseguibile come dipendenze
 
 ## 1. VM gestita da vagrant
 ___
-Per avere a disposizione una VM in cui far girare il sistema documentale DocWay, comprensivo dei moduli su descritti, e testarlo occorre scaricare la cartella **DebDocWay**
+Per avere a disposizione una VM in cui far girare il sistema documentale DocWay, comprensivo dei moduli su descritti, e testarlo occorre scaricare la cartella [**DebDocWay**](https://github.com/3dinformatica/riuso/tree/master/DebDocWay)
 
 1) Dopo aver installato [VirtualBox](https://www.virtualbox.org/) e [Vagrant](https://www.vagrantup.com/), installare il plugin che permette a Vagrant di comunicare con VirtualBox
 
