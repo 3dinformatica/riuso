@@ -192,7 +192,11 @@ Per avere a disposizione una VM in cui far girare il sistema documentale DocWay,
     - Da una shell lanciare: vagrant plugin install vagrant-vbguest
 
 
-2) Dopo aver scaricato il pacchetto platform per linux <ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz> e averlo posizionato all'interno della cartella da dentro la stessa lanciare il comando: vagrant up
+2) Dopo aver scaricato il pacchetto platform per linux 
+
+>ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz
+
+e averlo posizionato all'interno della cartella da dentro la stessa lanciare il comando: vagrant up
 
 3) Aprire un browser e visitare la pagina http://localhost:18080/DocWay4/ ed inserire le seguenti credenziali per accedere a DocWay:
 
@@ -251,7 +255,9 @@ Per un utilizzo medio: circa 30 utenti collegati contemporaneamente, un milione 
 
 #### Pacchetto eXtraWay Platform
 
-Scaricare il pacchetto eXtraWay Platform per Windows <ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-windows.zip>
+Scaricare il pacchetto eXtraWay Platform per Windows 
+
+>ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-windows.zip
 
 Il pacchetto ExtraWay Platform è suddiviso in cartelle, di seguito la funzione di ogni componente:
 
@@ -411,7 +417,9 @@ Una volta completata la registrazione compare una finestra "registrazione comple
 ___
 ### - Installazione su piattaforma Linux di ExtraWay Platform
 
-Scaricare il pacchetto eXtraWay Platform per Linux <ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz>
+Scaricare il pacchetto eXtraWay Platform per Linux 
+
+>ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso#istruzioni-per-le-dipendenze-extraway-e-docway)
 
