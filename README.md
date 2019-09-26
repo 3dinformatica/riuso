@@ -411,7 +411,7 @@ Una volta completata la registrazione compare una finestra "registrazione comple
 ___
 ### - Installazione su piattaforma Linux di ExtraWay Platform
 
-Scaricare il pacchetto eXtraWay Platform per Linux(ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz)
+Scaricare il pacchetto eXtraWay Platform per Linux (ftp://ftp.3di.it/extra/platform/eXtraWay-platform-latest-linux.tar.gz)
 
 ###### [[Torna su]](https://github.com/3dinformatica/riuso#descrizione-del-progetto-di-riuso) - [[Torna a *Istruzioni per le dipendenze eXtraWay e DocWay*]](https://github.com/3dinformatica/riuso#istruzioni-per-le-dipendenze-extraway-e-docway)
 
